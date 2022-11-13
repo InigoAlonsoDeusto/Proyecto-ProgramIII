@@ -2,33 +2,60 @@ package Juego;
 
 
 import java.awt.Color;
-
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
+import java.util.Random;
+
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
-import java.util.Random;
 
 
 public class WombatWarsMain extends JFrame {
 
-     JPanel panel;
-     JLabel[] agujeros = new JLabel[9];
+     private JPanel panel;
+     private JLabel[] agujeros = new JLabel[9];
      Border borde = BorderFactory.createLineBorder(new Color (0, 100, 0), 5); //temporal para marcar los agujeros mientras no tengamos imagenes
 
      private int[] agujeroConWombat = new int[9]; //Array que va a representar el estado del agujero
                                                   //Si int=1 el wombat se verá, si int=0 no.
+     public int puntuacion = 0; //empezamos con una puntuacion de 0 en un inicio
+
+     private void presionarBoton(int id){ //con este metodo primero comprueba si el agujero que tocamos es un wombat o un agujero vacio, si es un wonbat se le sumara un punto a la puntiacion y si es una agujero se le restara un punto.Despues actualizaria el contador de puntuacion limpiaria el tablero y generaria otro wonbat aleatorio
+        int valor = agujeroConWombat[id];
+
+        if (valor==1){
+            puntuacion++;
+        }else{ // valor==0
+            puntuacion--;
+        }
+        //lblPuntuacion.setText("Score:"+ puntuacion);
+        limpiar();
+        randomWombat();
+     }
+
+     private void iniciarEventos(){ //para cada agujero o wombat le asignamos un click event para detectar que hemos hecho click y donde hemos clicado
+        for( int i = 0; i<agujeros.length;i++ ){
+            agujeros[i].addMouseListener(new MouseAdapter(){
+                public void mouseClicked(MouseEvent e){
+                    JLabel lbl = (JLabel)e.getSource();
+                    int id = Integer.parseInt(lbl.getName());
+                    presionarBoton(id);
+                }
+            });
+        }
+    
+     }
 
     
-    public static  void main(String[] args) {
-        WombatWarsMain ventana = new WombatWarsMain(); //Las  dos siguientes lineas llaman y hacen visible la ventana.
-        ventana.setVisible(true);
+   
+    
 
-    }
-
-    public WombatWarsMain() {
+    private void juego() {
         setTitle("WombatWars"); //Las siguientes 4 lineas determinan algunas caracteristicas de la ventana emergente; su nombre, tamaño y su manera de cerrarse.
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -103,7 +130,6 @@ public class WombatWarsMain extends JFrame {
         for(int i = 0; i < 9; i++) {
             agujeroConWombat[i] = 0; //Inicializamos todos los agujeros a 0 para que no haya ningun wombat visible.
         }
-
         
          
     }
@@ -124,6 +150,22 @@ public class WombatWarsMain extends JFrame {
 
     }
 
+    private void limpiar(){ //con ese metodo el tablero empieza vacio en un principio
+            for(int i = 0 ; i < 9; i++){
+                agujeros[i].setBackground(new Color(0,100,0));
+                agujeroConWombat[i]= 0;
+            }
 
+        }
 
+        public WombatWarsMain(){ //aqui juntamos estos tres metodos que serian la base del juego
+            juego();
+            limpiar();
+            iniciarEventos();
+        }
+  
+        public static  void main(String[] args) {
+            WombatWarsMain ventana = new WombatWarsMain(); //Las  dos siguientes lineas llaman y hacen visible la ventana.
+            ventana.setVisible(true);
+        }
 }
