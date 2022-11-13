@@ -92,6 +92,8 @@ public class WombatWarsMain extends JFrame {
         agujeros[8].setName("8");
         agujeros[8].setBounds(900, 275,100,100);
         panel.add(agujeros[8]);
+
+        
     }
 
 
