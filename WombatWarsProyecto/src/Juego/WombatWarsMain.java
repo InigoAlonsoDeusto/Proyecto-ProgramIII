@@ -26,6 +26,7 @@ public class WombatWarsMain extends JFrame {
      private JPanel panel;
      private JLabel[] agujeros = new JLabel[9];
      Border borde = BorderFactory.createLineBorder(new Color (0, 100, 0), 5); //temporal para marcar los agujeros mientras no tengamos imagenes
+     Border borde2 = BorderFactory.createLineBorder(new Color (100, 0, 0), 5); //temporal para marcar los agujeros mientras no tengamos imagenes
 
      private JLabel lblPuntuacion;
      private JLabel lblTiempoRestante;
@@ -63,10 +64,12 @@ public class WombatWarsMain extends JFrame {
 
         if (valor==1){
             puntuacion++;
-        }else{ // valor==0
+        }else{ 
+        	valor=0;
             puntuacion--;
         }
-        //lblPuntuacion.setText("Score:"+ puntuacion);
+        
+        lblPuntuacion.setText("Score:"+ puntuacion);
         limpiar();
         randomWombat();
      }
@@ -176,10 +179,6 @@ public class WombatWarsMain extends JFrame {
         agujeros[8].setBounds(900, 275,100,100);
         panel.add(agujeros[8]);
 
-        for(int i = 0; i < 9; i++) {
-            agujeroConWombat[i] = 0; //Inicializamos todos los agujeros a 0 para que no haya ningun wombat visible.
-        }
-
         lblPuntuacion = new JLabel ("Puntuacion: 0"); //Implementamos JLabel para mostrar la puntuacion del jugador a lo largo de la partida
         lblPuntuacion.setHorizontalAlignment(SwingConstants.TRAILING);
         lblPuntuacion.setForeground(new Color(135, 206, 250));
@@ -204,22 +203,27 @@ public class WombatWarsMain extends JFrame {
         panel.add(btnEmpezar);
     }
 
-    public void randomWombat() {//Esta clase va a generar un numero aleatorio (del 0 al 9 por los agujeros)
-                               //para determinar el nº del hoyo en el que saldrá el wombat. 
+    public void randomWombat() //Esta clase va a generar un numero aleatorio (del 0 al 9 por los agujeros)
+                               //para determinar el nº del hoyo en el que saldrá el wombat.
+    { 
 
         Random numeroRandom = new Random(System.currentTimeMillis()); //Inicializamos el numeroRandom
         int wombat = numeroRandom.nextInt(9); //Creamos la variable wombat (para luego poder saber cual es el que sale)
                                                       //Y le ponemos el numero random que va a crear este metodo entre el 0 y 9.
 
         agujeroConWombat[wombat] = 1; //Ponemos el agujero a 1 para que el wombat esté visible (salga del agujero).
+
         agujeros[wombat].setBackground(new Color (100, 0, 0)); //Lo pintamos por ahora para comprobar que sale, aquí le meteremos la imagen del wombat con .setIcon().
+
     }
 
     private void limpiar(){ //con ese metodo el tablero empieza vacio en un principio
             for(int i = 0 ; i < 9; i++){
                 agujeros[i].setBackground(new Color(0,100,0));
+                agujeros[i].setBorder(borde2);
                 agujeroConWombat[i]= 0;
             }
+
         }
 
         public WombatWarsMain(){ //aqui juntamos estos tres metodos que serian la base del juego
