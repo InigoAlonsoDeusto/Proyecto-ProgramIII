@@ -44,20 +44,20 @@ public class WombatWarsMain extends JFrame {
      public int puntuacion = 0; //empezamos con una puntuacion de 0 en un inicio
 
      private void gameOver() { //generamos el gameover para cuando finalice la partida y para que nos muestre la puntuacion obtenida
-    	btnEmpezar.setEnabled(true); //tambien reiniciaremos las variables (tiempo, puntuacion y sus labels) a su estado inicial
-    	
-    	if(puntuacion > puntuacionMaxima) {
-    		puntuacionMaxima = puntuacion;
-    		lblPuntuacionMaxima.setText("" +puntuacionMaxima);
-    		JOptionPane.showMessageDialog(this, "Tu puntuacion final es: " +puntuacionMaxima);
-    	} else {
-    		JOptionPane.showMessageDialog(this, "Tu puntuacion final es: " +puntuacion);
-    	}
-    	puntuacion = 0;
-    	tiempoRestante = 60;
-    	lblPuntuacion.setText("Puntuacion: 0");
-    	lblTiempoRestante.setText("60");
-    	limpiar();
+        btnEmpezar.setEnabled(true); //tambien reiniciaremos las variables (tiempo, puntuacion y sus labels) a su estado inicial
+        
+        if(puntuacion > puntuacionMaxima) {
+            puntuacionMaxima = puntuacion;
+            lblPuntuacionMaxima.setText("" +puntuacionMaxima);
+            JOptionPane.showMessageDialog(this, "Tu puntuacion final es: " +puntuacionMaxima);
+        } else {
+            JOptionPane.showMessageDialog(this, "Tu puntuacion final es: " +puntuacion);
+        }
+        puntuacion = 0;
+        tiempoRestante = 60;
+        lblPuntuacion.setText("Puntuacion: 0");
+        lblTiempoRestante.setText("60");
+        limpiar();
     }
 
      private void presionarBoton(int id){ //con este metodo primero comprueba si el agujero que tocamos es un wombat o un agujero vacio, si es un wonbat se le sumara un punto a la puntiacion y si es una agujero se le restara un punto.Despues actualizaria el contador de puntuacion limpiaria el tablero y generaria otro wonbat aleatorio
