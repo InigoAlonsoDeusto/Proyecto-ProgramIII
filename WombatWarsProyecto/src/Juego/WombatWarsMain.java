@@ -126,13 +126,18 @@ public class WombatWarsMain extends JFrame {
         agujeros[8].setBounds(900, 275,100,100);
         panel.add(agujeros[8]);
 
+    }
 
-        for(int i = 0; i < 9; i++) {
-            agujeroConWombat[i] = 0; //Inicializamos todos los agujeros a 0 para que no haya ningun wombat visible.
-        }
+    private void limpiar(){ //con ese metodo el tablero empieza vacio en un principio
+        for(int i = 0 ; i < 9; i++){
+            agujeros[i].setBackground(new Color(0,100,0));
+            agujeroConWombat[i]= 0;//Inicializamos todos los agujeros a 0 para que no haya ningun wombat visible.
+         }
+
+    }
         
          
-    }
+    
 
     public void randomWombat() //Esta clase va a generar un numero aleatorio (del 0 al 9 por los agujeros)
                                //para determinar el nº del hoyo en el que saldrá el wombat.
@@ -149,14 +154,6 @@ public class WombatWarsMain extends JFrame {
 
 
     }
-
-    private void limpiar(){ //con ese metodo el tablero empieza vacio en un principio
-            for(int i = 0 ; i < 9; i++){
-                agujeros[i].setBackground(new Color(0,100,0));
-                agujeroConWombat[i]= 0;
-            }
-
-        }
 
         public WombatWarsMain(){ //aqui juntamos estos tres metodos que serian la base del juego
             juego();
