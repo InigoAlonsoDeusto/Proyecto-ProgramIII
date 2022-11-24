@@ -187,7 +187,7 @@ public class WombatWarsMain extends JFrame {
         }
 
         lblPuntuacion = new JLabel ("Puntuacion: 0"); //Implementamos JLabel para mostrar la puntuacion del jugador a lo largo de la partida
-        lblPuntuacion.setHorizontalAlignment(SwingConstants.TRAILING);
+        lblPuntuacion.setHorizontalAlignment(SwingConstants.TRAILING); //TRAILING para que se ajuste al texto
         lblPuntuacion.setForeground(new Color(135, 206, 250));
         lblPuntuacion.setBounds(423, 54, 144, 33);
         PanelWW.add(lblPuntuacion);
