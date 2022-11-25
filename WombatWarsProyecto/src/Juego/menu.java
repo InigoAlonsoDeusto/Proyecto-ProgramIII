@@ -13,6 +13,9 @@ public class menu {
         X obj = new X();
         
     }
+
+    public void setVisible(boolean b) {
+    }
     
 }
 
