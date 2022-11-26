@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import Juego.Launcher.WombatWarsMain;
-import Juego.VentanasLogIn.VentanaTienda;
+
 
 public class menu extends JFrame{
 
@@ -92,7 +92,7 @@ public class menu extends JFrame{
                 System.out.println("si");
 
                 VentanaTienda Tienda = new VentanaTienda();
-                VentanaTienda()
+                Tienda.VentanaTiendaCode();
 
                   
                 dispose();     

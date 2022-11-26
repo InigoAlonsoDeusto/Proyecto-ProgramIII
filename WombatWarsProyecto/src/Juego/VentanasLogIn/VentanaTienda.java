@@ -1,4 +1,4 @@
-package Juego.VentanasLogin;
+package Juego.VentanasLogIn;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -8,6 +8,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame; 
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Juego.Utilidades.Usuario;
 
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
@@ -21,11 +23,12 @@ public class VentanaTienda extends JFrame {
 	private menu m;
 
 
-	public void VentanaTienda() {
+	public void VentanaTiendaCode() {
+		
 		setTitle("Tienda");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
-		frame.setVisible(true);
+		setVisible(true);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -50,7 +53,10 @@ public class VentanaTienda extends JFrame {
 		JButton btnVolver = new JButton("VOLVER");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			    m.setVisible(true);
+
+				menu men = new menu();
+				men.X();
+
 			    VentanaTienda.this.setVisible(false);
 			    VentanaTienda.this.dispose();
 			}
