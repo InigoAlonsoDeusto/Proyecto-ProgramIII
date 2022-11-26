@@ -27,7 +27,7 @@ public class Utilidades {
 			br.close();
 			fr.close();
 		
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return usuarios;
@@ -50,7 +50,7 @@ public class Utilidades {
 			br.close();
 			fr.close();
 		
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return usuarios;
@@ -71,7 +71,7 @@ File aFile = new File("usuarios.txt");
 			fw.close();
 			fw.close();
 
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
