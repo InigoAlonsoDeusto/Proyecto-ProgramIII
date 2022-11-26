@@ -67,7 +67,8 @@ public class menu extends JFrame{
 
 
                 //Parte de Adrian
-
+                VentanaBD ventana = new VentanaBD();
+                ventana.ventanaBD();
 
 
                 //nombre de clase           
