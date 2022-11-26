@@ -1,4 +1,4 @@
-package Juego;
+package Juego.Utilidades;
 
 
 import java.io.BufferedReader;
@@ -9,8 +9,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import Juego.Usuario;
 public class Utilidades {
 
 	public static ArrayList<Usuario> leerUsuarios() {

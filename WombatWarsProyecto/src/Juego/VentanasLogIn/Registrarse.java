@@ -1,4 +1,4 @@
-package Juego;
+package Juego.VentanasLogIn;
 
 
 import java.awt.BorderLayout;
@@ -8,8 +8,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import Juego.Usuario;
-import Juego.Utilidades;
+import Juego.Utilidades.Usuario;
+import Juego.Utilidades.Utilidades;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;

@@ -1,4 +1,4 @@
-package Juego;
+package Juego.VentanasLogIn;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -7,8 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import Juego.Usuario;
-import Juego.Utilidades;
+import Juego.Utilidades.Usuario;
+import Juego.Utilidades.Utilidades;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -28,24 +28,11 @@ public class VentanaLogin extends JFrame {
 	private boolean loginCorrecto;
 	private Usuario u;
 
+	public void Login() {
 
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaLogin frame = new VentanaLogin();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	public VentanaLogin() {
-		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 400);
+		setVisible(true);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -93,7 +80,7 @@ public class VentanaLogin extends JFrame {
 					JOptionPane.showMessageDialog(contentPane, "Login correcto");
 					
 					menu men = new menu();
-					men.setVisible(true);
+					men.X();
 					
 					VentanaLogin.this.setVisible(false);
 					VentanaLogin.this.dispose();

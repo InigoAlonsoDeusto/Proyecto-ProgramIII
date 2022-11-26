@@ -1,4 +1,4 @@
-package Juego;
+package Juego.Utilidades;
 
 
 public class Usuario {
