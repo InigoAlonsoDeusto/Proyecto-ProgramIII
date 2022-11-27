@@ -8,13 +8,28 @@ import Juego.VentanasLogIn.VentanaLogin;
 //import Juego.baseDeDatos.baseDeDatos;
 
 
-public class Launcher {
+public class Launcher extends Thread{
+
+    private int id;
+
+    public Launcher (int id){
+        this.id = id;
+
+    }
+
+    public void run(){
+        logger.LanzarLogger();
+
+    }
     public static void main(String[] args) {
+
+        Launcher h1 = new Launcher(1);
 
         VentanaLogin PrimeraVentana = new VentanaLogin();
         PrimeraVentana.Login();
 
-        logger.LanzarLogger();
+        h1.start();
+
         //baseDeDatos.MeterDatos(); <- Este método ya se ha usado, no lo necesitamos otra vez.
         String[] wombats = {"wombatNormal", "wombatGordo", "wombatOro", "wombatDiamante", "wombatTiempo", "wombatBomba", "wombatNuke", "reyWombat"};
 
