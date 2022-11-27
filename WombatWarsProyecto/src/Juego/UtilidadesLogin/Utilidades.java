@@ -1,4 +1,4 @@
-package Juego.Utilidades;
+package Juego.UtilidadesLogin;
 
 
 import java.io.BufferedReader;

@@ -6,13 +6,15 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import Juego.Launcher.WombatWarsMain;
-import Juego.Utilidades.Reloj;
+import Juego.UtilidadesJuego.GeneradorDeWombats;
+import Juego.UtilidadesJuego.Puntuacion;
+import Juego.UtilidadesJuego.Reloj;
 
 public class Inicio {
 
     public static void InicioCode(){ 
 
-        WombatWarsMain.randomWombat();
+        GeneradorDeWombats.randomWombatCode();
         
         Reloj.RelojCode();
 
@@ -21,7 +23,7 @@ public class Inicio {
                 public void mouseClicked(MouseEvent e){
                     JLabel lbl = (JLabel)e.getSource();
                     int id = Integer.parseInt(lbl.getName());
-                    WombatWarsMain.presionarBoton(id);
+                    Puntuacion.presionarBoton(id);
                 }
             });
         }

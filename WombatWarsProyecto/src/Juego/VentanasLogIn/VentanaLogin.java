@@ -8,8 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import Juego.Logger.logger;
-import Juego.Utilidades.Usuario;
-import Juego.Utilidades.Utilidades;
+import Juego.UtilidadesLogin.Usuario;
+import Juego.UtilidadesLogin.Utilidades;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;

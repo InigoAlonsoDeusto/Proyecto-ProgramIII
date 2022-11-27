@@ -1,4 +1,4 @@
-package Juego.Utilidades;
+package Juego.UtilidadesJuego;
 
 import java.util.Timer;
 import java.util.TimerTask;

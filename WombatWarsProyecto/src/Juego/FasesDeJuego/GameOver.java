@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 import Juego.Launcher.WombatWarsMain;
 import Juego.Logger.logger;
+import Juego.UtilidadesJuego.Limpiador;
 
 public class GameOver {
 
@@ -19,7 +20,7 @@ public class GameOver {
             WombatWarsMain.puntuacion = 0;
             WombatWarsMain.lblPuntuacion.setText("puntuacion: 0");
             WombatWarsMain.lblTiempoRestante.setText("0");
-            WombatWarsMain.limpiar();
+            Limpiador.limpiarCode();
             
         } catch (Exception e) {
             logger.log.error("ERROR: Se ha producido un error relacionado con la puntuacion."); 
@@ -28,7 +29,7 @@ public class GameOver {
         } finally {
             WombatWarsMain.puntuacion = 0;
             WombatWarsMain.lblPuntuacion.setText("puntuacion: 0");
-            WombatWarsMain.limpiar();
+            Limpiador.limpiarCode();
         }
         
     }

@@ -2,28 +2,20 @@ package Juego.Launcher;
 
 
 import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 
 import java.util.Random;
-import java.util.Timer;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
-import javax.xml.stream.events.Comment;
 
 import Juego.FasesDeJuego.Inicio;
 import Juego.Logger.logger;
-import Juego.Utilidades.Reloj;
-import Juego.baseDeDatos.baseDatos;
+
 
 
 
@@ -45,8 +37,8 @@ public class WombatWarsMain extends JFrame {
 
      private JPanel panel;
      public static JLabel[] agujeros = new JLabel[9];
-     static Border borde = BorderFactory.createLineBorder(new Color (0, 100, 0), 5); //temporal para marcar los agujeros mientras no tengamos imagenes
-     static Border borde2 = BorderFactory.createLineBorder(new Color (100, 0, 0), 5); //temporal para marcar los agujeros mientras no tengamos imagenes
+     public static Border borde = BorderFactory.createLineBorder(new Color (0, 100, 0), 5); //temporal para marcar los agujeros mientras no tengamos imagenes
+     public static Border borde2 = BorderFactory.createLineBorder(new Color (100, 0, 0), 5); //temporal para marcar los agujeros mientras no tengamos imagenes
 
      public static JLabel lblPuntuacion;
      public static JLabel lblTiempoRestante;
@@ -57,7 +49,7 @@ public class WombatWarsMain extends JFrame {
 
      private static JButton btnEmpezar;
 
-     private static int[] agujeroConWombat = new int[9]; //Array que va a representar el estado del agujero
+     public static int[] agujeroConWombat = new int[9]; //Array que va a representar el estado del agujero
                                                   //Si int=1 el wombat se verá, si int=0 no.
      public static int puntuacion = 0; //empezamos con una puntuacion de 0 en un inicio
 
