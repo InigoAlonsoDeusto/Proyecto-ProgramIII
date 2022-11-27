@@ -65,7 +65,7 @@ public class VentanaTienda extends JFrame {
 		btnVolver.setBounds(297, 219, 89, 23);
 		panel.add(btnVolver);
 		
-		JLabel lblBienvenida = new JLabel("Bienvenido, <dynamic>! Elige bien los accesorios que necesitaras");
+		JLabel lblBienvenida = new JLabel("Bienvenido! Elige bien los accesorios que necesitaras");
 		lblBienvenida.setHorizontalAlignment(SwingConstants.CENTER);
 		lblBienvenida.setVerticalAlignment(SwingConstants.BOTTOM);
 		lblBienvenida.setBounds(10, -11, 406, 25);
