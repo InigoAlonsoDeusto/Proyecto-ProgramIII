@@ -60,15 +60,16 @@ public class Utilidades {
 File aFile = new File("usuarios.txt");
 		
 		try {
-			FileWriter fw = new FileWriter(aFile);
+			FileWriter fw = new FileWriter(aFile,true);
 			BufferedWriter bw = new BufferedWriter(fw);
 		
 			for (Usuario usuario : usuarios) {
 				String texto = usuario.getUsername() + ";" + usuario.getContrasenya();
+				texto += "\n";
 				bw.write(texto);
 			}
+			bw.flush();
 			bw.close();
-			fw.close();
 			fw.close();
 
 		} catch (Exception e) {
