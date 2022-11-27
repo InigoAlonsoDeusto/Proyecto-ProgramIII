@@ -20,7 +20,9 @@ import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 import javax.xml.stream.events.Comment;
 
+import Juego.FasesDeJuego.Inicio;
 import Juego.Logger.logger;
+import Juego.Utilidades.Reloj;
 import Juego.baseDeDatos.baseDatos;
 
 
@@ -28,60 +30,39 @@ import Juego.baseDeDatos.baseDatos;
 public class WombatWarsMain extends JFrame {
 
     public void WombatWarsMainCode(){ //aqui juntamos estos tres metodos que serian la base del juego
+
+        setTitle("WombatWars"); //Las siguientes 4 lineas determinan algunas caracteristicas de la ventana emergente; su nombre, tamaño y su manera de cerrarse.
+        setResizable(false);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(0, 0, 1200, 650);
+        setVisible(true);
+
         juego();
         limpiar();
-        iniciarEventos();
+        Inicio.InicioCode();
+
     }
 
      private JPanel panel;
-     private JLabel[] agujeros = new JLabel[9];
-     Border borde = BorderFactory.createLineBorder(new Color (0, 100, 0), 5); //temporal para marcar los agujeros mientras no tengamos imagenes
-     Border borde2 = BorderFactory.createLineBorder(new Color (100, 0, 0), 5); //temporal para marcar los agujeros mientras no tengamos imagenes
+     public static JLabel[] agujeros = new JLabel[9];
+     static Border borde = BorderFactory.createLineBorder(new Color (0, 100, 0), 5); //temporal para marcar los agujeros mientras no tengamos imagenes
+     static Border borde2 = BorderFactory.createLineBorder(new Color (100, 0, 0), 5); //temporal para marcar los agujeros mientras no tengamos imagenes
 
-     private JLabel lblPuntuacion;
-     private JLabel lblTiempoRestante;
-     private JLabel lblPuntuacionMaxima;
+     public static JLabel lblPuntuacion;
+     public static JLabel lblTiempoRestante;
+     public static JLabel lblPuntuacionMaxima;
 
-     private int tiempoRestante = 60;
-     private int puntuacionMaxima = 0;
+     private static int tiempoRestante = 10;
+     public static int puntuacionMaxima = 0;
 
-     private JButton btnEmpezar;
-     private Timer temporizador;
+     private static JButton btnEmpezar;
 
-     private int[] agujeroConWombat = new int[9]; //Array que va a representar el estado del agujero
+     private static int[] agujeroConWombat = new int[9]; //Array que va a representar el estado del agujero
                                                   //Si int=1 el wombat se verá, si int=0 no.
-     public int puntuacion = 0; //empezamos con una puntuacion de 0 en un inicio
+     public static int puntuacion = 0; //empezamos con una puntuacion de 0 en un inicio
 
-     private void gameOver() { //generamos el gameover para cuando finalice la partida y para que nos muestre la puntuacion obtenida
-        btnEmpezar.setEnabled(true); //tambien reiniciaremos las variables (tiempo, puntuacion y sus labels) a su estado inicial
-        try {
-            if(puntuacion > puntuacionMaxima) {
-                puntuacionMaxima = puntuacion;
-                lblPuntuacionMaxima.setText("" +puntuacionMaxima);
-                JOptionPane.showMessageDialog(this, "Tu puntuacion final es: " +puntuacionMaxima);
-            } else {
-                JOptionPane.showMessageDialog(this, "Tu puntuacion final es: " +puntuacion);
-            }
-            puntuacion = 0;
-            tiempoRestante = 60;
-            lblPuntuacion.setText("Puntuacion: 0");
-            lblTiempoRestante.setText("60");
-            limpiar();
-            
-        } catch (Exception e) {
-            logger.log.error("ERROR: Se ha producido un error relacionado con la puntuacion."); 
-            e.printStackTrace();
 
-        } finally {
-            puntuacion = 0;
-            tiempoRestante = 60;
-            lblPuntuacion.setText("Puntuacion: 0");
-            lblTiempoRestante.setText("60");
-            limpiar();
-        } 
-    }
-
-     private void presionarBoton(int id){ //con este metodo primero comprueba si el agujero que tocamos es un wombat o un agujero vacio, si es un wonbat se le sumara un punto a la puntiacion y si es una agujero se le restara un punto.Despues actualizaria el contador de puntuacion limpiaria el tablero y generaria otro wonbat aleatorio
+     public static void presionarBoton(int id){ //con este metodo primero comprueba si el agujero que tocamos es un wombat o un agujero vacio, si es un wonbat se le sumara un punto a la puntiacion y si es una agujero se le restara un punto.Despues actualizaria el contador de puntuacion limpiaria el tablero y generaria otro wonbat aleatorio
         int valor = agujeroConWombat[id];
         try {
             if (valor==1){
@@ -101,48 +82,8 @@ public class WombatWarsMain extends JFrame {
         }
     }
 
-     private void iniciarEventos(){ //para cada agujero o wombat le asignamos un click event para detectar que hemos hecho click y donde hemos clicado
-        for( int i = 0; i<agujeros.length;i++ ){
-            agujeros[i].addMouseListener(new MouseAdapter(){
-                public void mouseClicked(MouseEvent e){
-                    JLabel lbl = (JLabel)e.getSource();
-                    int id = Integer.parseInt(lbl.getName());
-                    presionarBoton(id);
-                }
-            });
-        }
-
-        btnEmpezar.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                btnEmpezar.setEnabled(false);
-                limpiar();
-                //temporizador.start();
-                randomWombat();
-            }
-        });
-
-        //El temporizador lo tendremos en la siguiente entrega, pero ahora mismo no sabemos implementarlo bien
-        
-         /* temporizador = new Timer(1000, new ActionListener() { //creamos el temporizador para que cuente los 60 segundos que dura una partida
-            public void actionPerformed(ActionEvent evt) {
-                if(tiempoRestante == 0) {
-                    lblTiempoRestante.setText("" + tiempoRestante);
-                    temporizador.stop();
-                    gameOver();
-                }else {
-                    lblTiempoRestante.setText("" + tiempoRestante);
-                    tiempoRestante--;
-                }
-            }
-        } ); */
-     }
 
     public void juego() {
-        setTitle("WombatWars"); //Las siguientes 4 lineas determinan algunas caracteristicas de la ventana emergente; su nombre, tamaño y su manera de cerrarse.
-        setResizable(false);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(0, 0, 1200, 650);
-        setVisible(true);
 
         JPanel PanelWW =  new JPanel(); //Estas 3 lineas son para poder meter cosas a nuestra ventana, y de paso ponerla verde
         PanelWW.setBackground(new Color (0, 100, 0)); //Esto hay que cambiarlo por texturas mas adelante que queda biendefeo
@@ -220,7 +161,7 @@ public class WombatWarsMain extends JFrame {
         lblPuntuacion.setBounds(423, 54, 144, 33);
         PanelWW.add(lblPuntuacion);
 
-        lblTiempoRestante = new JLabel("60"); //Implementamos JLabel para indicar el tiempo restante
+        lblTiempoRestante = new JLabel("10"); //Implementamos JLabel para indicar el tiempo restante
         lblTiempoRestante.setHorizontalAlignment(SwingConstants.CENTER);
         lblTiempoRestante.setForeground(new Color(240, 128, 128));
         lblTiempoRestante.setBounds(232, 54, 144, 33);
@@ -232,13 +173,9 @@ public class WombatWarsMain extends JFrame {
         lblPuntuacionMaxima.setBounds(433, 18, 134, 33);
         PanelWW.add(lblPuntuacionMaxima);
         
-        btnEmpezar = new JButton("Empezar"); //creamos el boton para que comience la partida
-        btnEmpezar.setBackground(Color.WHITE);
-        btnEmpezar.setBounds(32, 60, 110, 33);
-        panel.add(btnEmpezar);
     }
 
-    public void randomWombat() {//Esta clase va a generar un numero aleatorio (del 0 al 9 por los agujeros)
+    public static void randomWombat() {//Esta clase va a generar un numero aleatorio (del 0 al 9 por los agujeros)
                                //para determinar el nº del hoyo en el que saldrá el wombat. 
         try {
         Random numeroRandom = new Random(System.currentTimeMillis()); //Inicializamos el numeroRandom
@@ -254,44 +191,12 @@ public class WombatWarsMain extends JFrame {
         }
     }
 
-    private void limpiar(){ //con ese metodo el tablero empieza vacio en un principio
+    public static void limpiar(){ //con ese metodo el tablero empieza vacio en un principio
             for(int i = 0 ; i < 9; i++){
                 agujeros[i].setBorder(borde);
                 agujeroConWombat[i]= 0;
             }
         }
-
-        public WombatWarsMain(){ //aqui juntamos estos tres metodos que serian la base del juego
-            juego();
-            limpiar();
-            iniciarEventos();
-        }
   
-        /* 
-        public static  void main(String[] args) {
-
-            baseDatos.conectar();
-            baseDatos.crearTablaWombat();
-            baseDatos.insertarWombat("wombatNormal", 1, 10, "El wombat comun que aparecera con mas frecuencia en las partidas.");
-            baseDatos.insertarWombat("wombatGordo", 5, 30, "wombat con mas vida de lo normal, proporcionando mas monedas al matarlo.");
-            baseDatos.insertarWombat("wombatOro",1 ,50, "Wombat que al matarlo te proporcionara mas monedas de lo habitual, pocas probabilidades de que aparezca.");
-            baseDatos.insertarWombat("wombatDiamante",1 ,500, "Wombat que al matarlo te proporcionara muchisimas mas monedas de lo habitual, muy pocas probabilidades de que aparezca.");
-            baseDatos.insertarWombat("wombatTiempo", 1, 0, "Añade 5 segundos de partida al matarlo.");
-            baseDatos.insertarWombat("wombatBomba",1 ,0, "Si lo pinchas explota y te quita 1 corazon.");
-            baseDatos.insertarWombat("wombatNuke", 1, 0, "Si lo pinchas, tu tambien moriras pues trae consigo una bomba nuclear.");
-            baseDatos.insertarWombat("reyWombat", 1000, 0, "jefe final, requiere el MegaMataWombats™ que se obtendrá en la Tienda, después de avanzar bastante en el juego");
-           
-            baseDatos.crearTablaPersonajes();
-            baseDatos.insertarPersonaje("Protagonista", 3, "Según vaya jugando partidas podrá ir acumulando oro.");
-            baseDatos.insertarPersonaje("Granjero", 0, "Aparece al final de cada nivel con vida para ofrecer al protagonista su recompensa.");
-            
-
-
-            WombatWarsMain ventana = new WombatWarsMain(); //Las  dos siguientes lineas llaman y hacen visible la ventana.
-            ventana.setVisible(true);
-
-
-            
-        }
-    */
+        
 }
