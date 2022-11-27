@@ -106,7 +106,7 @@ public class VentanaBD extends JFrame {
         }
         
      } catch (Exception e) {
-        
+        e.printStackTrace();
      }
 
     
@@ -141,7 +141,7 @@ public class VentanaBD extends JFrame {
 
         }
     } catch (Exception e) {
-        
+        e.printStackTrace();
     } 
 
     }

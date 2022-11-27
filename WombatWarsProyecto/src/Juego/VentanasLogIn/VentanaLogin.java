@@ -95,11 +95,7 @@ public class VentanaLogin extends JFrame {
 		contentPane.add(btnIniciarSesin);
 	}
 	
-	
 
-
-			
-	
 
 	public void comprobarLogin(String username, String password) {
 		ArrayList<Usuario> usuarios = Utilidades.leerUsuarios();
