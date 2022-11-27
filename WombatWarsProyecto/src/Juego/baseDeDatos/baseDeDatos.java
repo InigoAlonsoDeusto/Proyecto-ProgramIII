@@ -2,8 +2,7 @@ package Juego.baseDeDatos;
 
 public class baseDeDatos {
 
-    public void MeterDatos() {
-
+    public static void MeterDatos() {
         baseDatos.conectar();
         baseDatos.crearTablaWombat();
         baseDatos.insertarWombat("wombatNormal", 1, 10, "El wombat comun que aparecera con mas frecuencia en las partidas.");
