@@ -16,6 +16,8 @@ import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.awt.event.ActionEvent;
 
 
@@ -148,19 +150,12 @@ public class VentanaBD extends JFrame {
         logger.log.error("ERROR: Ha habido un error al cargar las tablas de la BD");
     } 
 
+    
+
     }
 
 
-    //Metodo recursivo para obtener los datos que hay metidos en el array datosWombat de la Base de Datos.
-    public static void mostrarDatosWombat(String[] datosWombat, int indice) {
-        
-
-        if(indice != datosWombat.length) {
-            System.out.println(datosWombat[indice]);
-            mostrarDatosWombat(datosWombat, indice+1);
-        }
-    }
-  
+   
 
 }
 

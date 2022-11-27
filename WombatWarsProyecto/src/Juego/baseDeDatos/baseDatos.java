@@ -3,6 +3,7 @@ package Juego.baseDeDatos;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class baseDatos {
@@ -97,6 +98,24 @@ public class baseDatos {
 		
 	}
 
+	
+	public void seleccionarTodosWombats() { //Guarda los wombats que haya en la BD en un array
+		
+		String sql = "select nombre from wombat";
+		
+		try (Connection conn = this.conectar(); Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
+			
+			
+				while(rs.next()) { 
+					System.out.println(rs.getString("nombre"));
+					
+				}
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
 
 
 
