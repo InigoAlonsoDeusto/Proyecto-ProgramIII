@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import Juego.Launcher.WombatWarsMain;
+import Juego.Logger.logger;
 
 
 public class menu extends JFrame{
@@ -45,11 +46,11 @@ public class menu extends JFrame{
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("si");
 
 
                 WombatWarsMain partida = new WombatWarsMain(); 
-                partida.WombatWarsMainCode();                
+                partida.WombatWarsMainCode(); 
+                logger.log.info("INFO: Se ha abierto la ventana del juego correctamente.");               
                 dispose();     
             }
         });
@@ -63,11 +64,11 @@ public class menu extends JFrame{
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("si");
 
 
                 //Parte de Adrian
                 VentanaBD ventana = new VentanaBD();
+                logger.log.info("INFO: Se ha abierto la ventana del libro correctamente.");               
                 ventana.ventanaBD();
 
 
@@ -90,9 +91,9 @@ public class menu extends JFrame{
                 
                 
                 
-                System.out.println("si");
 
                 VentanaTienda Tienda = new VentanaTienda();
+                logger.log.info("INFO: Se ha abierto la ventana de la tienda correctamente.");               
                 Tienda.VentanaTiendaCode();
 
                   
@@ -113,7 +114,8 @@ public class menu extends JFrame{
             public void actionPerformed(ActionEvent e) {
 
 
-                VentanaLogin Login = new VentanaLogin();     
+                VentanaLogin Login = new VentanaLogin();    
+                logger.log.info("INFO: Se ha cerrado la sesion correctamente.");                
                 Login.Login();
 
                 dispose();     

@@ -2,6 +2,7 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "c:\\Users\\Alumno\\Desktop\\APUNTES PARCIAL PROGRAM\\sqlite-jdbc-3.39.3.0.jar",
-        "c:\\Users\\alons\\Desktop\\sqlite-jdbc-3.39.3.0.jar"
+        "c:\\Users\\alons\\Desktop\\sqlite-jdbc-3.39.3.0.jar",
+        "c:\\Users\\alons\\Desktop\\log4j-1.2.17.jar"
     ]
 }

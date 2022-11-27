@@ -8,7 +8,7 @@ import javax.swing.border.EmptyBorder;
 
 import javax.swing.table.DefaultTableModel;
 
-
+import Juego.Logger.logger;
 import Juego.baseDeDatos.baseDatos;
 
 import java.awt.BorderLayout;
@@ -65,6 +65,8 @@ public class VentanaBD extends JFrame {
 
             VentanaBD.this.setVisible(false);
             VentanaBD.this.dispose();
+            logger.log.info("INFO: Se ha abierto el menu correctamente."); 
+
         }
 
     });
@@ -107,6 +109,7 @@ public class VentanaBD extends JFrame {
         
      } catch (Exception e) {
         e.printStackTrace();
+        logger.log.error("ERROR: Ha habido un error al cargar las tablas de la BD");
      }
 
     
@@ -142,6 +145,7 @@ public class VentanaBD extends JFrame {
         }
     } catch (Exception e) {
         e.printStackTrace();
+        logger.log.error("ERROR: Ha habido un error al cargar las tablas de la BD");
     } 
 
     }

@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import Juego.Logger.logger;
 import Juego.Utilidades.Usuario;
 
 import javax.swing.JScrollPane;
@@ -59,6 +60,7 @@ public class VentanaTienda extends JFrame {
 
 			    VentanaTienda.this.setVisible(false);
 			    VentanaTienda.this.dispose();
+				logger.log.info("INFO: Se ha abierto el menu correctamente."); 
 			}
 		});
 		
@@ -75,5 +77,6 @@ public class VentanaTienda extends JFrame {
 		lblBienvenida2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblBienvenida2.setBounds(10, 11, 406, 25);
 		panel.add(lblBienvenida2);
+
 	}
 }

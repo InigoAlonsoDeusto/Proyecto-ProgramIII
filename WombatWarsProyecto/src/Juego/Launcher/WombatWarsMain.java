@@ -20,6 +20,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 import javax.xml.stream.events.Comment;
 
+import Juego.Logger.logger;
 import Juego.baseDeDatos.baseDatos;
 
 
@@ -27,7 +28,6 @@ import Juego.baseDeDatos.baseDatos;
 public class WombatWarsMain extends JFrame {
 
     public void WombatWarsMainCode(){ //aqui juntamos estos tres metodos que serian la base del juego
-        System.out.println("Wombat moment");
         juego();
         limpiar();
         iniciarEventos();
@@ -69,6 +69,7 @@ public class WombatWarsMain extends JFrame {
             limpiar();
             
         } catch (Exception e) {
+            logger.log.error("ERROR: Se ha producido un error relacionado con la puntuacion."); 
             e.printStackTrace();
 
         } finally {
@@ -85,7 +86,7 @@ public class WombatWarsMain extends JFrame {
         try {
             if (valor==1){
                 puntuacion++;
-            }else{ 
+            }else if (valor==0){  //cambio pal logger
                 valor=0;
                 puntuacion--;
             }
@@ -93,6 +94,9 @@ public class WombatWarsMain extends JFrame {
             limpiar();
             randomWombat();
         } catch (Exception e) {
+            logger.log.error("ERROR: Se ha producido un error relacionado el valor de los agujeros."); 
+ 
+
             e.printStackTrace();
         }
     }
@@ -245,6 +249,7 @@ public class WombatWarsMain extends JFrame {
         agujeros[wombat].setBorder(borde2); //Lo pintamos por ahora para comprobar que sale, aquí le meteremos la imagen del wombat con .setIcon().
    
         } catch (Exception e) {
+            logger.log.error("ERROR: Se ha producido al  determinar el agujero del wombat."); 
             e.printStackTrace();
         }
     }

@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import Juego.Logger.logger;
 import Juego.Utilidades.Usuario;
 import Juego.Utilidades.Utilidades;
 
@@ -63,13 +64,14 @@ public class Registrarse extends JFrame {
 
 					Utilidades.escribirUsuarios(usuarios);
 				
-
+					logger.log.info("INFO: Se ha registrado un nuevo usuario");
 
 					Registrarse.this.setVisible(false);
 					Registrarse.this.dispose();
 
 				} else {
 					JOptionPane.showMessageDialog(Registrarse.this, "Por favor, rellene todos los campos");
+					logger.log.error("ERROR: El usuario no ha rellenado todos los campos del registro.");
 				}
 			}
 		});

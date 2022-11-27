@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import Juego.Logger.logger;
 import Juego.Utilidades.Usuario;
 import Juego.Utilidades.Utilidades;
 
@@ -78,16 +79,20 @@ public class VentanaLogin extends JFrame {
 				hacerLogin(textField.getText(), passwordField.getText());
 				if (loginCorrecto) {
 					JOptionPane.showMessageDialog(contentPane, "Login correcto");
+					logger.log.info("INFO: Se ha realizado el LogIn correctamente.");
 					
 					menu men = new menu();
 					men.X();
 					
 					VentanaLogin.this.setVisible(false);
 					VentanaLogin.this.dispose();
+					logger.log.info("INFO: Se ha abierto el menu correctamente."); 
+
 					
 					
 				} else {
 					JOptionPane.showMessageDialog(contentPane, "Login incorrecto");
+					logger.log.error("ERROR: Error del usuario en el Login");
 				}
 			}
 		});
