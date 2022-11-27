@@ -12,7 +12,7 @@ public class baseDatos {
     
 	public static Connection conectar() {
 		Connection conn = null;
-		String url = "jdbc:sqlite:bdWW.db"; 
+		String url = "jdbc:sqlite:basedatosWW.db"; 
 		try {
 			conn = DriverManager.getConnection(url); 
 			
