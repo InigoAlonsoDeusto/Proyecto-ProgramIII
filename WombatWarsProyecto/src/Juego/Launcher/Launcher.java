@@ -26,7 +26,9 @@ public class Launcher extends Thread{
         Launcher h1 = new Launcher(1);
 
         VentanaLogin PrimeraVentana = new VentanaLogin();
-        PrimeraVentana.Login();
+        PrimeraVentana.Login2();
+        VentanaLogin PrimeraVentanaB = new VentanaLogin();
+        PrimeraVentanaB.Login();
 
         h1.start();
 
