@@ -3,9 +3,8 @@ package Juego.Launcher;
 
 
 import Juego.Logger.logger;
-
-import Juego.VentanasLogIn.VentanaLogin;
-//import Juego.baseDeDatos.baseDeDatos;
+import Juego.Ventanas.VentanaBD;
+import Juego.Ventanas.VentanaLogin;
 
 
 public class Launcher extends Thread{

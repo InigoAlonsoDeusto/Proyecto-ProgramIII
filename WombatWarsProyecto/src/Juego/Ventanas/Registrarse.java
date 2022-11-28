@@ -1,4 +1,4 @@
-package Juego.VentanasLogIn;
+package Juego.Ventanas;
 
 
 import java.awt.BorderLayout;
@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 
 import Juego.Logger.logger;
 import Juego.UtilidadesLogin.Usuario;
+import Juego.UtilidadesLogin.UsuarioRepetido;
 import Juego.UtilidadesLogin.Utilidades;
 
 import javax.swing.JLabel;
@@ -23,8 +24,8 @@ import java.awt.event.ActionEvent;
 public class Registrarse extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	public static JTextField textField;
+	public static JTextField textField_1;
 
 	public Registrarse() {
 		
@@ -62,12 +63,21 @@ public class Registrarse extends JFrame {
 					ArrayList<Usuario> usuarios = Utilidades.leerUsuarios();
 					usuarios.add(new Usuario(textField.getText(), textField_1.getText()));
 
-					Utilidades.escribirUsuarios(usuarios);
+					if (UsuarioRepetido.ComprobarSiUsuarioRepetido() == false){
+						
+						Utilidades.escribirUsuarios(usuarios);
 				
 					logger.log.info("INFO: Se ha registrado un nuevo usuario");
 
 					Registrarse.this.setVisible(false);
 					Registrarse.this.dispose();
+
+					}else{
+
+						JOptionPane.showMessageDialog(Registrarse.this, "El usuario ya existe.");
+						logger.log.error("ERROR: El usuario ha intentado registrar un usuario que ya existe.");
+
+					}
 
 				} else {
 					JOptionPane.showMessageDialog(Registrarse.this, "Por favor, rellene todos los campos");

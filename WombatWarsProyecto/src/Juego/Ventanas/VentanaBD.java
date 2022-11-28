@@ -1,4 +1,4 @@
-package Juego.VentanasLogIn;
+package Juego.Ventanas;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -9,9 +9,11 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
 import Juego.Logger.logger;
+import Juego.baseDeDatos.UtilidadResize;
 import Juego.baseDeDatos.baseDatos;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -29,40 +31,37 @@ public class VentanaBD extends JFrame {
 
     public void ventanaBD() {
 
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setSize(1200,650);
-    setVisible(true);
-
     setTitle("Base de Datos");
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	setBounds(100, 100, 800, 750);
+	setSize(1200,650);
 	setVisible(true);
 
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);
 	contentPane.setLayout(new BorderLayout(0, 0));
-		
-	JPanel panel = new JPanel();
-	contentPane.add(panel, BorderLayout.CENTER);
 	
-
+    JPanel panel =  new JPanel(); //Estas 3 lineas son para poder meter cosas a nuestra ventana, y de paso ponerla verde
+    //panel.setBackground(new Color (0, 0, 0)); //Esto hay que cambiarlo por texturas mas adelante que queda biendefeo
+    panel.setLayout(null);
+    setContentPane(panel);
+	
     JTable table = new JTable();
-    table.setBounds(0, 0, 1, 1);
+    table.setBounds(100, 100, 1000, 142);
     panel.add(table);
 
+    JButton btnWombats = new JButton("VER WOMBATS");
+    btnWombats.setBounds(450, 250, 300, 25);
+	panel.add(btnWombats);
+
     JTable table2 = new JTable();
-    table2.setBounds(0, 0, 1, 1);
+    table2.setBounds(100, 300, 1000, 50);
     panel.add(table2);
 
 
     JButton btnVolver = new JButton("VOLVER");
-    btnVolver.setBounds(297, 219, 89, 23);
+    btnVolver.setBounds(450, 360, 300, 25);
 	panel.add(btnVolver);
-
-    JButton btnWombats = new JButton("VER WOMBATS");
-    btnWombats.setBounds(297, 219, 89, 23);
-	panel.add(btnWombats);
 
     btnVolver.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
@@ -126,6 +125,9 @@ public class VentanaBD extends JFrame {
 
             model.addRow(datosWombat);
 
+            UtilidadResize.resizeColumnWidth(table);
+
+
         }
         
      } catch (Exception e) {
@@ -163,13 +165,13 @@ public class VentanaBD extends JFrame {
 
             modelo2.addRow(datosPersonajes);
 
+            UtilidadResize.resizeColumnWidth(table2);
+
         }
     } catch (Exception e) {
         e.printStackTrace();
         logger.log.error("ERROR: Ha habido un error al cargar las tablas de la BD");
     } 
-
-    
 
     }
 

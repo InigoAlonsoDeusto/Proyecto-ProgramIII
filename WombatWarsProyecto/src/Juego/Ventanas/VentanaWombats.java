@@ -1,4 +1,4 @@
-package Juego.VentanasLogIn;
+package Juego.Ventanas;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

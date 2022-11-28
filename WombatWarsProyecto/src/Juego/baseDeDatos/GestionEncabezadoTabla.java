@@ -1,4 +1,4 @@
-package Juego.VentanasLogIn;
+package Juego.baseDeDatos;
 
 import java.awt.Component;
 

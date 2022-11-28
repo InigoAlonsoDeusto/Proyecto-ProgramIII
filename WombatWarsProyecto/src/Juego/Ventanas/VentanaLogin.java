@@ -1,4 +1,4 @@
-package Juego.VentanasLogIn;
+package Juego.Ventanas;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -9,6 +9,7 @@ import javax.swing.border.EmptyBorder;
 
 import Juego.Logger.logger;
 import Juego.UtilidadesLogin.Usuario;
+import Juego.UtilidadesLogin.UsuarioRepetido;
 import Juego.UtilidadesLogin.Utilidades;
 
 import javax.swing.JLabel;
