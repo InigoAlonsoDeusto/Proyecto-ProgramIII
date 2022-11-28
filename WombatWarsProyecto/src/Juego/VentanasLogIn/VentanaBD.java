@@ -37,6 +37,7 @@ public class VentanaBD extends JFrame {
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	setBounds(100, 100, 800, 750);
 	setVisible(true);
+
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);
@@ -59,6 +60,10 @@ public class VentanaBD extends JFrame {
     btnVolver.setBounds(297, 219, 89, 23);
 	panel.add(btnVolver);
 
+    JButton btnWombats = new JButton("VER WOMBATS");
+    btnWombats.setBounds(297, 219, 89, 23);
+	panel.add(btnWombats);
+
     btnVolver.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
 
@@ -68,6 +73,20 @@ public class VentanaBD extends JFrame {
             VentanaBD.this.setVisible(false);
             VentanaBD.this.dispose();
             logger.log.info("INFO: Se ha abierto el menu correctamente."); 
+
+        }
+
+    });
+
+    btnWombats.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+
+            VentanaWombats wombats = new VentanaWombats();
+            wombats.VentanaWombatsCode();
+
+            VentanaBD.this.setVisible(false);
+            VentanaBD.this.dispose();
+            logger.log.info("INFO: Se ha abierto la ventana Wombats correctamente."); 
 
         }
 

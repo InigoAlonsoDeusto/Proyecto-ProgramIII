@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import Juego.Logger.logger;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 
@@ -21,30 +23,12 @@ import java.awt.event.ActionListener;
 public class VentanaWombats extends JFrame {
 
 	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaWombats frame = new VentanaWombats();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	
-	public VentanaWombats() {
+	public void VentanaWombatsCode() {
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(378, 450);
+        setSize(1200,650);
+        setVisible(true);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -69,6 +53,7 @@ public class VentanaWombats extends JFrame {
 		JButton wombatBomba = new JButton("Wombat Bomba");
 		wombatBomba.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				System.out.println("hola soy aner");
 				ImageIcon icono = new ImageIcon("res/wombatBomba.jpeg");
 				imagen.setIcon(icono);
 			}
@@ -135,6 +120,23 @@ public class VentanaWombats extends JFrame {
 		});
 		wombatNuke.setBounds(600, 210, 60, 25);
 		contentPane.add(wombatNuke);
+
+		JButton Volver = new JButton("Volver");
+		Volver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				VentanaBD ventana = new VentanaBD();
+                logger.log.info("INFO: Se ha abierto la ventana del libro correctamente.");               
+                ventana.ventanaBD();
+
+
+                //nombre de clase           
+                dispose();   
+
+			}
+		});
+		Volver.setBounds(600, 240, 60, 25);
+		contentPane.add(Volver);
 
 	}
 }
