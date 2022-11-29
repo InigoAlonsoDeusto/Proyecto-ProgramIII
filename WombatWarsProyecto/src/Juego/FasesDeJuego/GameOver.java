@@ -5,6 +5,8 @@ import javax.swing.JOptionPane;
 import Juego.Launcher.WombatWarsMain;
 import Juego.Logger.logger;
 import Juego.UtilidadesJuego.Limpiador;
+import Juego.Ventanas.VentanaLogin;
+import Juego.baseDeDatos.baseDatos;
 
 public class GameOver {
 
@@ -14,8 +16,20 @@ public class GameOver {
                 WombatWarsMain.puntuacionMaxima = WombatWarsMain.puntuacion;
                 WombatWarsMain.lblPuntuacionMaxima.setText("" +WombatWarsMain.puntuacionMaxima);
                 JOptionPane.showMessageDialog(null, "Tu puntuacion final es: " +WombatWarsMain.puntuacionMaxima);
+
             } else {
                 JOptionPane.showMessageDialog(null, "Tu puntuacion final es: " +WombatWarsMain.puntuacion);
+
+                int puntuacionfinal = WombatWarsMain.puntuacion;
+                String nombre = VentanaLogin.textField.getText();
+                //String[] datosTablaPuntuaciones = new String[4];
+                //datosTablaPuntuaciones[1] = VentanaLogin.textField.getText();
+                //datosTablaPuntuaciones[2] = null;
+                //datosTablaPuntuaciones[3] = puntuacionfinal;
+                //System.out.println(puntuacionfinal);
+                //System.out.println(VentanaLogin.textField.getText());
+
+                baseDatos.meterDatosPartida( nombre, puntuacionfinal);
             }
             WombatWarsMain.puntuacion = 0;
             WombatWarsMain.lblPuntuacion.setText("puntuacion: 0");
@@ -27,6 +41,7 @@ public class GameOver {
             e.printStackTrace();
 
         } finally {
+
             WombatWarsMain.puntuacion = 0;
             WombatWarsMain.lblPuntuacion.setText("puntuacion: 0");
             Limpiador.limpiarCode();

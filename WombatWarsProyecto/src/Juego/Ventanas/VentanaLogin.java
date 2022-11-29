@@ -25,7 +25,7 @@ import java.awt.event.ActionEvent;
 public class VentanaLogin extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	public static JTextField textField;
 	private JPasswordField passwordField;
 	private boolean loginCorrecto;
 	private Usuario u;

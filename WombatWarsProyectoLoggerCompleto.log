@@ -30,3 +30,16 @@
 2022-11-29 23:09:40 INFO  logger:83 - INFO: Se ha realizado el LogIn correctamente.
 2022-11-29 23:09:40 INFO  logger:90 - INFO: Se ha abierto el menu correctamente.
 2022-11-29 23:09:41 INFO  logger:53 - INFO: Se ha abierto la ventana del juego correctamente.
+2022-11-29 23:30:42 INFO  logger:16 - Programa comenzado
+2022-11-29 23:31:02 INFO  logger:83 - INFO: Se ha realizado el LogIn correctamente.
+2022-11-29 23:31:02 INFO  logger:90 - INFO: Se ha abierto el menu correctamente.
+2022-11-29 23:31:04 INFO  logger:53 - INFO: Se ha abierto la ventana del juego correctamente.
+2022-11-29 23:34:16 INFO  logger:16 - Programa comenzado
+2022-11-29 23:34:38 INFO  logger:83 - INFO: Se ha realizado el LogIn correctamente.
+2022-11-29 23:34:38 INFO  logger:90 - INFO: Se ha abierto el menu correctamente.
+2022-11-29 23:34:40 INFO  logger:53 - INFO: Se ha abierto la ventana del juego correctamente.
+2022-11-29 23:35:20 ERROR logger:43 - ERROR: Se ha producido un error relacionado con la puntuacion.
+2022-11-29 23:37:00 INFO  logger:16 - Programa comenzado
+2022-11-29 23:37:09 INFO  logger:83 - INFO: Se ha realizado el LogIn correctamente.
+2022-11-29 23:37:10 INFO  logger:90 - INFO: Se ha abierto el menu correctamente.
+2022-11-29 23:37:14 INFO  logger:53 - INFO: Se ha abierto la ventana del juego correctamente.
