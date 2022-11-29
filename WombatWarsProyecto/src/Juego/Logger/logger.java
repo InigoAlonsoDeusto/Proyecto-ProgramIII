@@ -1,7 +1,7 @@
 package Juego.Logger;
 
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 public class logger {
 
@@ -10,8 +10,8 @@ public class logger {
 
 
 public static void LanzarLogger() {
-
-    BasicConfigurator.configure();
+    String propertiesPath = "WombatWarsProyecto/logConfig/log4j.properties";
+    PropertyConfigurator.configure(propertiesPath);
 
     log.info("Programa comenzado"); //AL REVISAR ESTO AL FINAL, ACUERDATE DE PONER UN LOGGER PARA INDICAR EL FINAL
 

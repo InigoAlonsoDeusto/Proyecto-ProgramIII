@@ -2,12 +2,4 @@
 inigo;alonso
 ifernandez;1512
 adrian;clarita123
-aner;ferxo
-
-wombatSlayer;12345
-anerfeo;si
-no;si
-bocayoteamo;riverplateb
-7894235;9783245
-eduardo;sajujo
-riverplate;boccakk
+aner;ferxxo
