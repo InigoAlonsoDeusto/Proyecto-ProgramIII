@@ -3,33 +3,22 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+import Juego.Ventanas.ventanaDatosGameOver;
+
 public class FinalAFichero {
 
-    public static void writeTXT(VentanaBD.DatosPartida) throws IOException, ClassNotFoundException, SQLException {
-        Writer writer = null;
-        try{
-          writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("filename.txt")));
-          StringBuffer bufferHeader = new StringBuffer();
-          for(int i = 0; i<table.getColumnCount();i++){
-            bufferHeader.append(table.getColumnName(i));
-            if(i!=table.getColumnCount()) bufferHeader.append(" ");
-          }
-          writer.write(bufferHeader.toString()+"\r\n");
-      
-          
-            for (int k = 0; k<table.getColumnCount(); k++){
-              buffer.append(table.getValueAt(j,k));
-              if(k!=table.getColumnCount()) buffer.append(" ");
-            }
-            writer.write(buffer.toString()+"\r\n");
-          
-        }finally{
-          writer.close();
-        }
-      
-
-    
-        }
+    public Object[][] getTableData ( ventanaDatosGameOver.datosPartida) {
+        DefaultTableModel dtm = (DefaultTableModel) table.getModel();
+        int nRow = dtm.getRowCount(), nCol = dtm.getColumnCount();
+        Object[][] tableData = new Object[nRow][nCol];
+        for (int i = 0 ; i < nRow ; i++)
+            for (int j = 0 ; j < nCol ; j++)
+                tableData[i][j] = dtm.getValueAt(i,j);
+        return tableData;
     }
 
-*/
+    
+} */

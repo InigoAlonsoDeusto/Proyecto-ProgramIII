@@ -12,7 +12,6 @@ public class ventanaDatosGameOver extends JFrame {
 	
 	public void VentanaDatosGameOverCode() {
     
-    System.out.println("HOla, estoy funcionando yujuuuu");
 	setTitle("Base de Datos");
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	setBounds(100, 100, 817, 569);
@@ -39,7 +38,25 @@ public class ventanaDatosGameOver extends JFrame {
 
     datosPartida.setModel(model);
 
+    
+
 
 
 }
+
+public Object[][] getTableData (JTable datosPartida) {
+
+    DefaultTableModel dtm = (DefaultTableModel) datosPartida.getModel();
+    int nRow = dtm.getRowCount(), nCol = dtm.getColumnCount();
+    Object[][] tableData = new Object[nRow][nCol];
+
+    for (int i = 0 ; i < nRow ; i++)
+        for (int j = 0 ; j < nCol ; j++)
+            tableData[i][j] = dtm.getValueAt(i,j);
+            System.out.println("ALonso feo");
+
+
+    return tableData;
+}
+
 }
