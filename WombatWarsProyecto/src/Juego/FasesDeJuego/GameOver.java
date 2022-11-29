@@ -11,20 +11,22 @@ import Juego.baseDeDatos.baseDatos;
 
 public class GameOver {
 
+    public int puntuacionfinal = WombatWarsMain.puntuacion;
+
     public static void gameOver() { //generamos el gameover para cuando finalice la partida y para que nos muestre la WombatWarsMain.puntuacion obtenida
         try {
             if(WombatWarsMain.puntuacion < WombatWarsMain.puntuacionMaxima) {
                 WombatWarsMain.puntuacionMaxima = WombatWarsMain.puntuacion;
                 WombatWarsMain.lblPuntuacionMaxima.setText("" +WombatWarsMain.puntuacionMaxima);
                 JOptionPane.showMessageDialog(null, "Tu puntuacion final es: " +WombatWarsMain.puntuacionMaxima);
-                System.out.println("fer feo");
+                
 
             } else {
 
                 JOptionPane.showMessageDialog(null, "Tu puntuacion final es: " +WombatWarsMain.puntuacion);
 
 
-                int puntuacionfinal = WombatWarsMain.puntuacion;                
+                                
                 String nombre = VentanaLogin.textField.getText();
                 //String[] datosTablaPuntuaciones = new String[4];
                 //datosTablaPuntuaciones[1] = VentanaLogin.textField.getText();
@@ -34,7 +36,7 @@ public class GameOver {
                 //System.out.println(VentanaLogin.textField.getText());
 
                 ventanaDatosGameOver ventana = new ventanaDatosGameOver();
-                System.out.println("adrian feo");
+                
                 ventana.VentanaDatosGameOverCode();
 
                 baseDatos.meterDatosPartida( nombre, puntuacionfinal);

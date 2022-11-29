@@ -12,8 +12,7 @@ public class ventanaDatosGameOver extends JFrame {
 	
 	public void VentanaDatosGameOverCode() {
     
-    System.out.println("HOla, estoy funcionando yujuuuu");
-	setTitle("Base de Datos");
+	setTitle("Datos Final Partida");
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	setBounds(100, 100, 817, 569);
 	setVisible(true);
@@ -39,7 +38,19 @@ public class ventanaDatosGameOver extends JFrame {
 
     datosPartida.setModel(model);
 
+    String[] datosTabla = new String[3];
+    String[] titulosTabla = {"Nombre", "Fecha", "Puntuacion"};
+
+    model.addRow(titulosTabla);
+
+    String s = Integer.toString(GameOver.puntuacionfinal);
+
+    datosTabla[1] = VentanaLogin.textField.getText();
+    datosTabla[2] = null;
+    datosTabla[3] = s;
+
+    model.addRow(datosTabla);
 
 
-}
+    }
 }
