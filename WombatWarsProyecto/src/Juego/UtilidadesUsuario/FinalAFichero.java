@@ -1,4 +1,4 @@
-package Juego.UtilidadesUsuario;
+/* package Juego.UtilidadesUsuario;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,3 +32,4 @@ public class FinalAFichero {
         }
     }
 
+*/
