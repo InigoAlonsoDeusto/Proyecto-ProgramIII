@@ -1,4 +1,4 @@
-package Juego.UtilidadesLogin;
+package Juego.UtilidadesUsuario;
 
 
 public class Usuario {

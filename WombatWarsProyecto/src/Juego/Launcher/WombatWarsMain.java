@@ -68,7 +68,7 @@ public class WombatWarsMain extends JFrame {
         lblPuntuacion.setBounds(423, 54, 144, 33);
         PanelWW.add(lblPuntuacion);
 
-        lblTiempoRestante = new JLabel("60"); //Implementamos JLabel para indicar el tiempo restante
+        lblTiempoRestante = new JLabel("20"); //Implementamos JLabel para indicar el tiempo restante
         lblTiempoRestante.setHorizontalAlignment(SwingConstants.CENTER);
         lblTiempoRestante.setForeground(new Color(240, 128, 128));
         lblTiempoRestante.setBounds(232, 54, 144, 33);

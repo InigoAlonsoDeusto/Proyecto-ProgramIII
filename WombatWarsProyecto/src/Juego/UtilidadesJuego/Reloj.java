@@ -21,7 +21,7 @@ public class Reloj {
     static Timer timer;
 
 public static void RelojCode() {
-    int secs = 60;
+    int secs = 20;
     int delay = 1000;
     int period = 1000;
     timer = new Timer();

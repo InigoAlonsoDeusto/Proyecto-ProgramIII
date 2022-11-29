@@ -1,4 +1,4 @@
-package Juego.UtilidadesLogin;
+package Juego.UtilidadesUsuario;
 
 
 import java.io.BufferedReader;
@@ -9,7 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-public class Utilidades {
+public class UtilidadesLogin {
 
 	public static ArrayList<Usuario> leerUsuarios() {
 		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
