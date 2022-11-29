@@ -8,10 +8,15 @@
         "c:\\Users\\ugluk\\Downloads\\sqlite-jdbc-3.39.4.0.jar",
         "c:\\Users\\ugluk\\OneDrive\\Escritorio\\Cosas importantes\\log4j-1.2.17.jar\\log4j-1.2.17.jar",
         "c:\\Users\\Alumno\\Downloads\\log4j-1.2.17.jar",
+<<<<<<< HEAD
         "c:\\Users\\Alumno\\Downloads\\sqlite-jdbc-3.39.3.0.jar"
     ],
     "java.project.sourcePaths": [
         "WombatWarsProyecto/src",
         "WombatWarsProyecto/logConfig"
+=======
+        "c:\\Users\\Alumno\\Downloads\\sqlite-jdbc-3.39.3.0.jar",
+        "c:\\Users\\Alumno\\Desktop\\sqlite-jdbc-3.40.0.0.jar"
+>>>>>>> 0931b2f74255ad94ed1c827925e832cc02798333
     ]
 }

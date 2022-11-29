@@ -9,6 +9,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import java.awt.Image;
 
 import Juego.FasesDeJuego.Inicio;
 import Juego.UtilidadesJuego.Limpiador;
@@ -65,7 +68,7 @@ public class WombatWarsMain extends JFrame {
         lblPuntuacion.setBounds(423, 54, 144, 33);
         PanelWW.add(lblPuntuacion);
 
-        lblTiempoRestante = new JLabel("10"); //Implementamos JLabel para indicar el tiempo restante
+        lblTiempoRestante = new JLabel("60"); //Implementamos JLabel para indicar el tiempo restante
         lblTiempoRestante.setHorizontalAlignment(SwingConstants.CENTER);
         lblTiempoRestante.setForeground(new Color(240, 128, 128));
         lblTiempoRestante.setBounds(232, 54, 144, 33);
@@ -137,5 +140,6 @@ public class WombatWarsMain extends JFrame {
         }
         
     }
+    //63x75
         
 }
