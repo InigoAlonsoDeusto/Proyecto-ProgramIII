@@ -118,6 +118,42 @@ public class baseDatos {
 	}
 
 
+	public static void crearTablaPUNTUACIONES() {
+		String sql = "Create table if not exists puntuaciones(nombre String, fecha String, puntuacion int)";
+		
+		try (Connection conn = baseDatos.conectar(); Statement stmt = conn.createStatement()){
+			
+			
+			stmt.execute(sql); 
+            System.out.println("La tabla ha sido creada");
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+
+    public static void meterDatosPartida(String nombre, int puntuacion) {
+        String sql = "Insert into puntuaciones(nombre, fecha, puntuacion) values (?,?,?)";
+
+        try (Connection conn = baseDatos.conectar(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
+			
+			
+			
+			pstmt.setString(1, nombre); 
+			
+			pstmt.setDate(2, new java.sql.Date(System.currentTimeMillis()));
+
+            pstmt.setInt(3, puntuacion);
+			
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+    }
+
+
 
 
 
