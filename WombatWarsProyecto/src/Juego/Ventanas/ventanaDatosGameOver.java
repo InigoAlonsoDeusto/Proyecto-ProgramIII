@@ -12,7 +12,11 @@ public class ventanaDatosGameOver extends JFrame {
 	
 	public void VentanaDatosGameOverCode() {
     
+<<<<<<< HEAD
 	setTitle("Base de Datos");
+=======
+	setTitle("Datos Final Partida");
+>>>>>>> cfcc3f6454784018860c96286b44e08325f86c9f
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	setBounds(100, 100, 817, 569);
 	setVisible(true);
@@ -38,10 +42,17 @@ public class ventanaDatosGameOver extends JFrame {
 
     datosPartida.setModel(model);
 
+<<<<<<< HEAD
     
 
+=======
+    String[] datosTabla = new String[3];
+    String[] titulosTabla = {"Nombre", "Fecha", "Puntuacion"};
+>>>>>>> cfcc3f6454784018860c96286b44e08325f86c9f
 
+    model.addRow(titulosTabla);
 
+<<<<<<< HEAD
 }
 
 public Object[][] getTableData (JTable datosPartida) {
@@ -59,4 +70,16 @@ public Object[][] getTableData (JTable datosPartida) {
     return tableData;
 }
 
+=======
+    String s = Integer.toString(GameOver.puntuacionfinal);
+
+    datosTabla[1] = VentanaLogin.textField.getText();
+    datosTabla[2] = null;
+    datosTabla[3] = s;
+
+    model.addRow(datosTabla);
+
+
+    }
+>>>>>>> cfcc3f6454784018860c96286b44e08325f86c9f
 }
