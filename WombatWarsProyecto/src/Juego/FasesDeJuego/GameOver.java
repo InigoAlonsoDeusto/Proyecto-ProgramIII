@@ -29,6 +29,9 @@ public class GameOver {
                 //System.out.println(puntuacionfinal);
                 //System.out.println(VentanaLogin.textField.getText());
 
+                ventanaDatosGameOver ventana = new ventanaDatosGameOver();
+                ventana.ventanaDatosGameOver();
+
                 baseDatos.meterDatosPartida( nombre, puntuacionfinal);
             }
             WombatWarsMain.puntuacion = 0;
