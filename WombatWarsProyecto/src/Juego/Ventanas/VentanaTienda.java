@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import Juego.Logger.logger;
-import Juego.UtilidadesLogin.Usuario;
+import Juego.UtilidadesUsuario.Usuario;
 
 import javax.swing.JScrollPane;
 import javax.swing.JButton;

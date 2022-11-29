@@ -9,9 +9,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import Juego.Logger.logger;
-import Juego.UtilidadesLogin.Usuario;
-import Juego.UtilidadesLogin.UsuarioRepetido;
-import Juego.UtilidadesLogin.Utilidades;
+import Juego.UtilidadesUsuario.Usuario;
+import Juego.UtilidadesUsuario.UsuarioRepetido;
+import Juego.UtilidadesUsuario.UtilidadesLogin;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -60,12 +60,12 @@ public class Registrarse extends JFrame {
 		btnRegistrarNuevoUsuario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (!textField.getText().equals("") && !textField_1.getText().equals("")) {
-					ArrayList<Usuario> usuarios = Utilidades.leerUsuarios();
+					ArrayList<Usuario> usuarios = UtilidadesLogin.leerUsuarios();
 					usuarios.add(new Usuario(textField.getText(), textField_1.getText()));
 
 					if (UsuarioRepetido.ComprobarSiUsuarioRepetido() == false){
 						
-						Utilidades.escribirUsuarios(usuarios);
+						UtilidadesLogin.escribirUsuarios(usuarios);
 				
 					logger.log.info("INFO: Se ha registrado un nuevo usuario");
 

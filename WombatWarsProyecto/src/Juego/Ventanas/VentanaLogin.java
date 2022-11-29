@@ -8,9 +8,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import Juego.Logger.logger;
-import Juego.UtilidadesLogin.Usuario;
-import Juego.UtilidadesLogin.UsuarioRepetido;
-import Juego.UtilidadesLogin.Utilidades;
+import Juego.UtilidadesUsuario.Usuario;
+import Juego.UtilidadesUsuario.UsuarioRepetido;
+import Juego.UtilidadesUsuario.UtilidadesLogin;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -175,7 +175,7 @@ public class VentanaLogin extends JFrame {
 
 
 	public void comprobarLogin(String username, String password) {
-		ArrayList<Usuario> usuarios = Utilidades.leerUsuarios();
+		ArrayList<Usuario> usuarios = UtilidadesLogin.leerUsuarios();
 		loginCorrecto = false;
 		
 		for (Usuario usuario : usuarios) {
@@ -189,7 +189,7 @@ public class VentanaLogin extends JFrame {
 	}
 
 	public void hacerLogin(String username, String password) {
-		HashMap<String, Usuario> usuarios = Utilidades.usuarios();
+		HashMap<String, Usuario> usuarios = UtilidadesLogin.usuarios();
 		if (usuarios.containsKey(username)) {
 			if (usuarios.get(username).getContrasenya().equals(password)) {
 				loginCorrecto = true;

@@ -26,3 +26,7 @@
 2022-11-29 22:56:00 INFO  logger:74 - INFO: Se ha abierto el menu correctamente.
 2022-11-29 22:56:03 INFO  logger:118 - INFO: Se ha cerrado la sesion correctamente.
 >>>>>>> e0975c865f5a6c4d5e2bb4cf4351e52c81741a75
+2022-11-29 23:09:27 INFO  logger:16 - Programa comenzado
+2022-11-29 23:09:40 INFO  logger:83 - INFO: Se ha realizado el LogIn correctamente.
+2022-11-29 23:09:40 INFO  logger:90 - INFO: Se ha abierto el menu correctamente.
+2022-11-29 23:09:41 INFO  logger:53 - INFO: Se ha abierto la ventana del juego correctamente.
