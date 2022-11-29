@@ -20,8 +20,7 @@ public class GameOver {
             } else {
                 JOptionPane.showMessageDialog(null, "Tu puntuacion final es: " +WombatWarsMain.puntuacion);
 
-                int puntuacionfinal = WombatWarsMain.puntuacion;
-                String nombre = VentanaLogin.textField.getText();
+                int puntuacionfinal = WombatWarsMain.puntuacion;                String nombre = VentanaLogin.textField.getText();
                 //String[] datosTablaPuntuaciones = new String[4];
                 //datosTablaPuntuaciones[1] = VentanaLogin.textField.getText();
                 //datosTablaPuntuaciones[2] = null;
