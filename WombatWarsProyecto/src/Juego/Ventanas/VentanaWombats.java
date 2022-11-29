@@ -26,19 +26,27 @@ public class VentanaWombats extends JFrame {
 	
 	public void VentanaWombatsCode() {
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1200,650);
-        setVisible(true);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
+	setTitle("Base de Datos");
+	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	setSize(1200,650);
+	setVisible(true);
+
+	contentPane = new JPanel();
+	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+	setContentPane(contentPane);
+	contentPane.setLayout(new BorderLayout(0, 0));
+	
+    JPanel panel =  new JPanel(); //Estas 3 lineas son para poder meter cosas a nuestra ventana, y de paso ponerla verde
+    //panel.setBackground(new Color (0, 0, 0)); //Esto hay que cambiarlo por texturas mas adelante que queda biendefeo
+    panel.setLayout(null);
+    setContentPane(panel);
 		
 		JLabel imagen = new JLabel("");
 		imagen.setHorizontalAlignment(SwingConstants.CENTER);
 		ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wombatNormal.jpeg");
 		imagen.setIcon(icono);
 		imagen.setBounds(0, 0, 378, 450);
-		contentPane.add(imagen);
+		panel.add(imagen);
 		
 		JButton wombatNormal = new JButton("Wombat Normal");
 		wombatNormal.addActionListener(new ActionListener() {
@@ -48,7 +56,7 @@ public class VentanaWombats extends JFrame {
 			}
 		});
 		wombatNormal.setBounds(600, 10, 60, 25);
-		contentPane.add(wombatNormal);
+		panel.add(wombatNormal);
 		
 		JButton wombatBomba = new JButton("Wombat Bomba");
 		wombatBomba.addActionListener(new ActionListener() {
@@ -59,7 +67,7 @@ public class VentanaWombats extends JFrame {
 			}
 		});
 		wombatBomba.setBounds(600, 40, 60, 25);
-		contentPane.add(wombatBomba);
+		panel.add(wombatBomba);
 		
 		JButton reyWombat = new JButton("Rey Wombat");
 		reyWombat.addActionListener(new ActionListener() {
@@ -69,7 +77,7 @@ public class VentanaWombats extends JFrame {
 			}
 		});
 		reyWombat.setBounds(600, 70, 60, 25);
-		contentPane.add(reyWombat);
+		panel.add(reyWombat);
 		
 		JButton wombatDiamante = new JButton("Wombat Diamante");
 		wombatDiamante.addActionListener(new ActionListener() {
@@ -79,7 +87,7 @@ public class VentanaWombats extends JFrame {
 			}
 		});
 		wombatDiamante.setBounds(600, 100, 60, 25);
-		contentPane.add(wombatDiamante);
+		panel.add(wombatDiamante);
 		
 		JButton wombatGordo = new JButton("Wombat Gordo");
 		wombatGordo.addActionListener(new ActionListener() {
@@ -89,7 +97,7 @@ public class VentanaWombats extends JFrame {
 			}
 		});
 		wombatGordo.setBounds(600, 130, 60, 25);
-		contentPane.add(wombatGordo);
+		panel.add(wombatGordo);
 		
 		JButton wombatOro = new JButton("Wombat Oro");
 		wombatOro.addActionListener(new ActionListener() {
@@ -99,7 +107,7 @@ public class VentanaWombats extends JFrame {
 			}
 		});
 		wombatOro.setBounds(600, 160, 60, 25);
-		contentPane.add(wombatOro);
+		panel.add(wombatOro);
 		
 		JButton wombatTiempo = new JButton("Wombat Tiempo");
 		wombatTiempo.addActionListener(new ActionListener() {
@@ -109,7 +117,7 @@ public class VentanaWombats extends JFrame {
 			}
 		});
 		wombatTiempo.setBounds(600, 190, 60, 25);
-		contentPane.add(wombatTiempo);
+		panel.add(wombatTiempo);
 		
 		JButton wombatNuke = new JButton("Wombat Nuke");
 		wombatNuke.addActionListener(new ActionListener() {
@@ -119,7 +127,7 @@ public class VentanaWombats extends JFrame {
 			}
 		});
 		wombatNuke.setBounds(600, 210, 60, 25);
-		contentPane.add(wombatNuke);
+		panel.add(wombatNuke);
 
 		JButton Volver = new JButton("Volver");
 		Volver.addActionListener(new ActionListener() {
@@ -136,7 +144,7 @@ public class VentanaWombats extends JFrame {
 			}
 		});
 		Volver.setBounds(600, 240, 60, 25);
-		contentPane.add(Volver);
+		panel.add(Volver);
 
 	}
 }
