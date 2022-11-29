@@ -2,6 +2,27 @@
 2022-11-29 21:43:32 INFO  logger:83 - INFO: Se ha realizado el LogIn correctamente.
 2022-11-29 21:43:32 INFO  logger:90 - INFO: Se ha abierto el menu correctamente.
 2022-11-29 21:43:32 INFO  logger:118 - INFO: Se ha cerrado la sesion correctamente.
+<<<<<<< HEAD
 2022-11-29 22:52:04 INFO  logger:16 - Programa comenzado
 2022-11-29 22:53:21 INFO  logger:16 - Programa comenzado
 2022-11-29 22:54:19 INFO  logger:16 - Programa comenzado
+=======
+2022-11-29 22:45:08 INFO  logger:16 - Programa comenzado
+2022-11-29 22:45:16 INFO  logger:83 - INFO: Se ha realizado el LogIn correctamente.
+2022-11-29 22:45:16 INFO  logger:90 - INFO: Se ha abierto el menu correctamente.
+2022-11-29 22:45:17 INFO  logger:71 - INFO: Se ha abierto la ventana del libro correctamente.
+2022-11-29 22:45:20 INFO  logger:88 - INFO: Se ha abierto la ventana Wombats correctamente.
+2022-11-29 22:45:24 INFO  logger:137 - INFO: Se ha abierto la ventana del libro correctamente.
+2022-11-29 22:45:26 INFO  logger:74 - INFO: Se ha abierto el menu correctamente.
+2022-11-29 22:45:28 INFO  logger:53 - INFO: Se ha abierto la ventana del juego correctamente.
+2022-11-29 22:55:24 INFO  logger:16 - Programa comenzado
+2022-11-29 22:55:30 INFO  logger:83 - INFO: Se ha realizado el LogIn correctamente.
+2022-11-29 22:55:30 INFO  logger:90 - INFO: Se ha abierto el menu correctamente.
+2022-11-29 22:55:31 INFO  logger:71 - INFO: Se ha abierto la ventana del libro correctamente.
+2022-11-29 22:55:34 INFO  logger:88 - INFO: Se ha abierto la ventana Wombats correctamente.
+2022-11-29 22:55:44 INFO  logger:137 - INFO: Se ha abierto la ventana del libro correctamente.
+2022-11-29 22:55:46 INFO  logger:88 - INFO: Se ha abierto la ventana Wombats correctamente.
+2022-11-29 22:55:58 INFO  logger:137 - INFO: Se ha abierto la ventana del libro correctamente.
+2022-11-29 22:56:00 INFO  logger:74 - INFO: Se ha abierto el menu correctamente.
+2022-11-29 22:56:03 INFO  logger:118 - INFO: Se ha cerrado la sesion correctamente.
+>>>>>>> e0975c865f5a6c4d5e2bb4cf4351e52c81741a75
