@@ -15,10 +15,10 @@ import java.awt.Image;
 
 import Juego.FasesDeJuego.Inicio;
 import Juego.UtilidadesJuego.Limpiador;
+import java.awt.FlowLayout;
 
 
 public class WombatWarsMain extends JFrame {
-
      private JPanel panel;
      public static JLabel[] agujeros = new JLabel[9];
      public static Border borde = BorderFactory.createLineBorder(new Color (0, 100, 0), 5); //temporal para marcar los agujeros mientras no tengamos imagenes
@@ -140,6 +140,4 @@ public class WombatWarsMain extends JFrame {
         }
         
     }
-    //63x75
-        
 }

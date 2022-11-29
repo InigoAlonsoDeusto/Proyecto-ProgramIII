@@ -43,7 +43,7 @@ public class VentanaWombats extends JFrame {
 		
 		JLabel imagen = new JLabel("");
 		imagen.setHorizontalAlignment(SwingConstants.CENTER);
-		ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wombatNormal.jpeg");
+		ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/fondoNivelesWombat.jpeg");
 		imagen.setIcon(icono);
 		imagen.setBounds(10, 35, 370, 450);
 		panel.add(imagen);
