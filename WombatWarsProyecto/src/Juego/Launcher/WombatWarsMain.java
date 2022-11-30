@@ -85,54 +85,132 @@ public class WombatWarsMain extends JFrame {
         agujeros[0].setName("0");
         agujeros[0].setBounds(300, 25, 100,100);
         panel.add(agujeros[0]);
+        
+        JLabel agujero0 = new JLabel("");
+		agujero0.setHorizontalAlignment(SwingConstants.CENTER);
+		ImageIcon iconoAgujero0 = new ImageIcon("WombatWarsProyecto/res/agujeroVacioPNG.jpeg");
+		agujero0.setIcon(iconoAgujero0);
+		agujero0.setBounds(300, 43, 100, 100);
+		panel.add(agujero0);
 
+		
         agujeros[1] = new JLabel("1");
         agujeros[1].setBorder(borde);
         agujeros[1].setName("1");
         agujeros[1].setBounds(600, 25,100,100);
         panel.add(agujeros[1]);
 
+        JLabel wombat1 = new JLabel("");
+        wombat1.setHorizontalAlignment(SwingConstants.CENTER);
+		ImageIcon iconoWombat1 = new ImageIcon("WombatWarsProyecto/res/wombatNormal.jpeg");
+		wombat1.setIcon(iconoWombat1);
+		wombat1.setBounds(600, 43,100,100);
+		panel.add(wombat1);
+        
+        JLabel agujero1 = new JLabel("");
+		agujero1.setHorizontalAlignment(SwingConstants.CENTER);
+		ImageIcon iconoAgujero1 = new ImageIcon("WombatWarsProyecto/res/agujeroVacioPNG.jpeg");
+		agujero1.setIcon(iconoAgujero1);
+		agujero1.setBounds(600, 43,100,100);
+		panel.add(agujero1);
+		
+        
         agujeros[2] = new JLabel("2");
         agujeros[2].setBorder(borde);
         agujeros[2].setName("2");
         agujeros[2].setBounds(900, 25,100,100);
         panel.add(agujeros[2]);
+        
+		JLabel agujero2 = new JLabel("");
+		agujero2.setHorizontalAlignment(SwingConstants.CENTER);
+		ImageIcon iconoAgujero2 = new ImageIcon("WombatWarsProyecto/res/agujeroVacioPNG.jpeg");
+		agujero2.setIcon(iconoAgujero2);
+		agujero2.setBounds(900, 43,100,100);
+		panel.add(agujero2);
+		
 
         agujeros[3] = new JLabel("3");
         agujeros[3].setBorder(borde);
         agujeros[3].setName("3");
         agujeros[3].setBounds(300, 150,100,100);
         panel.add(agujeros[3]);
+        
+		JLabel agujero3 = new JLabel("");
+		agujero3.setHorizontalAlignment(SwingConstants.CENTER);
+		ImageIcon iconoAgujero3 = new ImageIcon("WombatWarsProyecto/res/agujeroVacioPNG.jpeg");
+		agujero3.setIcon(iconoAgujero3);
+		agujero3.setBounds(300, 168, 100, 100);
+		panel.add(agujero3);
+        
 
         agujeros[4] = new JLabel("4");
         agujeros[4].setBorder(borde);
         agujeros[4].setName("4");
         agujeros[4].setBounds(600, 150,100,100);
         panel.add(agujeros[4]);
+        
+		JLabel agujero4 = new JLabel("");
+		agujero4.setHorizontalAlignment(SwingConstants.CENTER);
+		ImageIcon iconoAgujero4 = new ImageIcon("WombatWarsProyecto/res/agujeroVacioPNG.jpeg");
+		agujero4.setIcon(iconoAgujero4);
+		agujero4.setBounds(600, 168,100,100);
+		panel.add(agujero4);
+        
 
         agujeros[5] = new JLabel("5");
         agujeros[5].setBorder(borde);
         agujeros[5].setName("5");
         agujeros[5].setBounds(900, 150,100,100);
         panel.add(agujeros[5]);
+        
+		JLabel agujero5 = new JLabel("");
+		agujero5.setHorizontalAlignment(SwingConstants.CENTER);
+		ImageIcon iconoAgujero5 = new ImageIcon("WombatWarsProyecto/res/agujeroVacioPNG.jpeg");
+		agujero5.setIcon(iconoAgujero5);
+		agujero5.setBounds(900, 168,100,100);
+		panel.add(agujero5);
+        
 
         agujeros[6] = new JLabel("6");
         agujeros[6].setBorder(borde);
         agujeros[6].setName("6");
         agujeros[6].setBounds(300, 275,100,100);
         panel.add(agujeros[6]);
+        
+        JLabel agujero6 = new JLabel("");
+		agujero6.setHorizontalAlignment(SwingConstants.CENTER);
+		ImageIcon iconoAgujero6 = new ImageIcon("WombatWarsProyecto/res/agujeroVacioPNG.jpeg");
+		agujero6.setIcon(iconoAgujero6);
+		agujero6.setBounds(300, 293, 100, 100);
+		panel.add(agujero6);
+        
 
         agujeros[7] = new JLabel("7");
         agujeros[7].setBorder(borde);
         agujeros[7].setName("7");
         agujeros[7].setBounds(600, 275,100,100);
         panel.add(agujeros[7]);
+        
+		JLabel agujero7 = new JLabel("");
+		agujero7.setHorizontalAlignment(SwingConstants.CENTER);
+		ImageIcon iconoAgujero7 = new ImageIcon("WombatWarsProyecto/res/agujeroVacioPNG.jpeg");
+		agujero7.setIcon(iconoAgujero7);
+		agujero7.setBounds(600, 293,100,100);
+		panel.add(agujero7);
+		
 
         agujeros[8] = new JLabel("8");
         agujeros[8].setBorder(borde);
         agujeros[8].setName("8");
         agujeros[8].setBounds(900, 275,100,100);
         panel.add(agujeros[8]);
+        
+        JLabel agujero8 = new JLabel("");
+		agujero8.setHorizontalAlignment(SwingConstants.CENTER);
+		ImageIcon iconoAgujero8 = new ImageIcon("WombatWarsProyecto/res/agujeroVacioPNG.jpeg");
+		agujero8.setIcon(iconoAgujero8);
+		agujero8.setBounds(900, 293,100,100);
+		panel.add(agujero8);
 
         for(int i = 0; i < 9; i++) {
             agujeros[i].setBorder(borde);
