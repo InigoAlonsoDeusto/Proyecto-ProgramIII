@@ -23,6 +23,8 @@ public class GameOver {
 
             } else {
 
+                System.out.println("La puntuacion ahora mismo es "+puntuacionfinal);
+
                 JOptionPane.showMessageDialog(null, "Tu puntuacion final es: " +WombatWarsMain.puntuacion);
 
 
