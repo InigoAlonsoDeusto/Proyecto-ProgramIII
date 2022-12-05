@@ -12,8 +12,33 @@ import java.awt.Image;
 
 public class GeneradorDeWombats {
 
-    public static void randomWombatCode() {//Esta clase va a generar un numero aleatorio (del 0 al 9 por los agujeros)
-                                        //para determinar el nº del hoyo en el que saldrá el wombat. 
+	private Random numeroRandom;
+	private int wombat;
+		
+    public GeneradorDeWombats(Random numeroRandom, int wombat) {
+		super();
+		this.numeroRandom = numeroRandom;
+		this.wombat = wombat;
+	}
+
+	public Random getNumeroRandom() {
+		return numeroRandom;
+	}
+
+	public void setNumeroRandom(Random numeroRandom) {
+		this.numeroRandom = numeroRandom;
+	}
+
+	public int getWombat() {
+		return wombat;
+	}
+
+	public void setWombat(int wombat) {
+		this.wombat = wombat;
+	}
+
+	public static void randomWombatCode() {//Esta clase va a generar un numero aleatorio (del 0 al 9 por los agujeros)
+                                        //para determinar el nº del hoyo en el que saldrá el wombat.
         try {
             Random numeroRandom = new Random(System.currentTimeMillis()); //Inicializamos el numeroRandom
             int wombat = numeroRandom.nextInt(9); //Creamos la variable wombat (para luego poder saber cual es el que sale)
