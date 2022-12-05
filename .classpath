@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="WombatWarsProyecto/src"/>
+	<classpathentry kind="src" path="WombatWarsProyecto/bin"/>
+	<classpathentry kind="src" path="WombatWarsProyecto/res"/>
+	<classpathentry kind="src" path="WombatWarsProyecto/logConfig"/>
+	<classpathentry kind="src" path="WombatWarsProyecto/logs"/>
+	<classpathentry kind="src" path="WombatWarsProyecto/test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="ParaLibrerias/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="ParaLibrerias/sqlite-jdbc-3.39.3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>

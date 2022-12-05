@@ -267,3 +267,123 @@
 2022-12-05 03:16:31 INFO  GeneracionLogger:24 - INFO: Wombat generado.
 2022-12-05 03:16:32 INFO  GeneracionLogger:20 - INFO: Se ha acabado la partida.
 2022-12-05 03:16:33 INFO  GeneracionLogger:74 - INFO: Se han añadido los datos de la ultima partida correctamente.
+2022-12-05 14:40:39 INFO  GeneracionLogger:16 - Programa comenzado
+2022-12-05 14:40:43 INFO  GeneracionLogger:83 - INFO: Se ha realizado el LogIn correctamente.
+2022-12-05 14:40:43 INFO  GeneracionLogger:90 - INFO: Se ha abierto el menu correctamente.
+2022-12-05 14:40:43 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:43 INFO  GeneracionLogger:53 - INFO: Se ha abierto la ventana del juego correctamente.
+2022-12-05 14:40:44 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:44 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:45 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:45 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:45 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:45 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:46 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:46 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:47 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:47 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:48 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:48 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:48 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:48 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:49 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:49 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:49 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:49 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:50 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:50 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:51 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:51 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:52 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:52 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:53 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:53 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:40:54 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:40:54 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:41:03 INFO  GeneracionLogger:20 - INFO: Se ha acabado la partida.
+2022-12-05 14:41:06 INFO  GeneracionLogger:74 - INFO: Se han añadido los datos de la ultima partida correctamente.
+2022-12-05 14:42:45 INFO  GeneracionLogger:16 - Programa comenzado
+2022-12-05 14:42:48 INFO  GeneracionLogger:83 - INFO: Se ha realizado el LogIn correctamente.
+2022-12-05 14:42:48 INFO  GeneracionLogger:90 - INFO: Se ha abierto el menu correctamente.
+2022-12-05 14:42:48 INFO  GeneracionLogger:71 - INFO: Se ha abierto la ventana del libro correctamente.
+2022-12-05 14:42:49 INFO  GeneracionLogger:94 - INFO: Se ha abierto la ventana Wombats correctamente.
+2022-12-05 14:43:50 INFO  GeneracionLogger:16 - Programa comenzado
+2022-12-05 14:43:53 INFO  GeneracionLogger:83 - INFO: Se ha realizado el LogIn correctamente.
+2022-12-05 14:43:53 INFO  GeneracionLogger:90 - INFO: Se ha abierto el menu correctamente.
+2022-12-05 14:43:54 INFO  GeneracionLogger:71 - INFO: Se ha abierto la ventana del libro correctamente.
+2022-12-05 14:43:55 INFO  GeneracionLogger:94 - INFO: Se ha abierto la ventana Wombats correctamente.
+2022-12-05 14:43:56 INFO  GeneracionLogger:136 - INFO: Se ha abierto la ventana del libro correctamente.
+2022-12-05 14:44:54 INFO  GeneracionLogger:16 - Programa comenzado
+2022-12-05 14:44:57 INFO  GeneracionLogger:83 - INFO: Se ha realizado el LogIn correctamente.
+2022-12-05 14:44:57 INFO  GeneracionLogger:90 - INFO: Se ha abierto el menu correctamente.
+2022-12-05 14:44:58 INFO  GeneracionLogger:71 - INFO: Se ha abierto la ventana del libro correctamente.
+2022-12-05 14:44:59 INFO  GeneracionLogger:94 - INFO: Se ha abierto la ventana Wombats correctamente.
+2022-12-05 14:45:01 INFO  GeneracionLogger:136 - INFO: Se ha abierto la ventana del libro correctamente.
+2022-12-05 14:45:03 INFO  GeneracionLogger:75 - INFO: Se ha abierto el menu correctamente.
+2022-12-05 14:45:04 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:04 INFO  GeneracionLogger:53 - INFO: Se ha abierto la ventana del juego correctamente.
+2022-12-05 14:45:06 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:06 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:06 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:06 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:07 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:07 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:08 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:08 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:09 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:09 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:09 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:09 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:10 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:10 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:10 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:10 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:11 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:11 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:12 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:12 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:13 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:13 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:13 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:13 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:14 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:14 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:15 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:15 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:15 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:15 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:17 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:17 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:17 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:17 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:23 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:23 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:23 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:45:23 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:45:24 INFO  GeneracionLogger:20 - INFO: Se ha acabado la partida.
+2022-12-05 14:45:25 INFO  GeneracionLogger:74 - INFO: Se han añadido los datos de la ultima partida correctamente.
+2022-12-05 14:47:56 INFO  GeneracionLogger:16 - Programa comenzado
+2022-12-05 14:48:00 INFO  GeneracionLogger:83 - INFO: Se ha realizado el LogIn correctamente.
+2022-12-05 14:48:00 INFO  GeneracionLogger:90 - INFO: Se ha abierto el menu correctamente.
+2022-12-05 14:48:01 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:48:01 INFO  GeneracionLogger:53 - INFO: Se ha abierto la ventana del juego correctamente.
+2022-12-05 14:48:02 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:48:02 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:48:03 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:48:03 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:48:03 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:48:03 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:48:04 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:48:04 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:48:05 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:48:05 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:48:06 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:48:06 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:48:07 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:48:07 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:48:07 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:48:07 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:48:08 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:48:08 INFO  GeneracionLogger:24 - INFO: Wombat generado.
+2022-12-05 14:48:09 INFO  GeneracionLogger:13 - INFO: Puntuacion aumentada.
+2022-12-05 14:48:09 INFO  GeneracionLogger:24 - INFO: Wombat generado.
