@@ -5,6 +5,21 @@ import ventanasNiveles.Nivel1;
 
 public class Puntuacion {
 
+	private int valor;
+	
+    public Puntuacion(int valor) {
+		super();
+		this.valor = valor;
+	}
+
+	public int getValor() {
+		return valor;
+	}
+
+	public void setValor(int valor) {
+		this.valor = valor;
+	}
+
     public static void presionarBoton(int id){ //con este metodo primero comprueba si el agujero que tocamos es un wombat o un agujero vacio, si es un wonbat se le sumara un punto a la puntiacion y si es una agujero se le restara un punto.Despues actualizaria el contador de puntuacion limpiaria el tablero y generaria otro wonbat aleatorio
         int valor = Nivel1.agujeroConWombat[id];
         try {

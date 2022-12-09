@@ -10,7 +10,14 @@ import ventanasNiveles.Nivel1;
 public class Reloj {
     
     static int interval;
-
+    static Timer timer;
+    
+    public Reloj(int interval, Timer timer) {
+		super();
+		this.interval = interval;
+		this.timer = timer;
+	}
+    
     public int getInterval() {
         return this.interval;
     }
@@ -18,8 +25,14 @@ public class Reloj {
     public void setInterval(int interval) {
         this.interval = interval;
     }
+    
+    public Timer getTimer() {
+        return this.timer;
+    }
 
-    static Timer timer;
+    public void setTimer(Timer timer) {
+        this.timer = timer;
+        }
 
 public static void RelojCode() {
     int secs = 20;
