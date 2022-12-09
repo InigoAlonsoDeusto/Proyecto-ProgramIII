@@ -33,9 +33,14 @@ public static void RelojCode() {
         public void run() {
 
             int tiempoRestante = (setInterval());
-
-
             Nivel1.lblTiempoRestante.setText(Integer.toString(tiempoRestante));
+            System.out.println(tiempoRestante);
+            
+            if (tiempoRestante%2==0) {
+            	
+                GeneradorDeWombats.randomWombatCode();
+            }
+
 
              if (tiempoRestante == 0){
 
