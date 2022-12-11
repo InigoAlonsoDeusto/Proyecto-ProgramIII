@@ -10,7 +10,8 @@ import ventanasNiveles.Nivel1;
 import ventanas.VentanaDatosGameOver;
 
 public class GameOver {
-
+	
+	
     public static int puntuacionfinal = Nivel1.puntuacion;
     public static String nombre = VentanaLogin.textField.getText();
 
@@ -18,6 +19,8 @@ public class GameOver {
         try {
         	
         	GeneracionLogger.log.info("INFO: Se ha acabado la partida."); 
+        	
+        		
 
                 JOptionPane.showMessageDialog(null, "Tu puntuacion final es: " +Nivel1.puntuacion);
 

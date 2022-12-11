@@ -24,43 +24,58 @@ public class Puntuacion {
         int valor = Nivel1.agujeroConWombat[id];
         try {
             if (valor==1){
-                Nivel1.puntuacion++;
-                GeneracionLogger.log.info("INFO: Puntuacion aumentada."); 
                 
-                if (GeneradorDeWombats.tipoWombatGlobal == 1) {
+                
+                if (GeneradorDeWombats.tipoWombatGlobal == 0) { //Cod wombat normal
                 	
-                	//Cod wombat oro
+                	Nivel1.puntuacion+=10;
+                    GeneracionLogger.log.info("INFO: Puntuacion aumentada.");
                 	
-                	Limpiador.limpiarCode();
                 	
-                }if (GeneradorDeWombats.tipoWombatGlobal == 2) {
-                	
-                	//Cod wombat diamant
                 	
                 	Limpiador.limpiarCode();
                 	
-                }if (GeneradorDeWombats.tipoWombatGlobal == 3) {
+                
+				}if (GeneradorDeWombats.tipoWombatGlobal == 1) { //Cod wombat oro
+                	
+                	Nivel1.puntuacion+=50;
+                    GeneracionLogger.log.info("INFO: Puntuacion aumentada.");
+                	
+                	
+                	
+                	Limpiador.limpiarCode();
+                	
+                }if (GeneradorDeWombats.tipoWombatGlobal == 2) { //Cod wombat diamante
+                	
+                	Nivel1.puntuacion+=500;
+                    GeneracionLogger.log.info("INFO: Puntuacion aumentada.");
+                	
+                	
+                	
+                	Limpiador.limpiarCode();
+                	
+                }if (GeneradorDeWombats.tipoWombatGlobal == 3) { //Cod wombat tiempo
                 	
                 	Reloj.interval += 5;
                 	
                 	Limpiador.limpiarCode();
                 	
-                }if (GeneradorDeWombats.tipoWombatGlobal == 4) {
+                }if (GeneradorDeWombats.tipoWombatGlobal == 4) { //Cod wombat bomba
                 	
-                	//cod wombat bomba
                 	
-                	Limpiador.limpiarCode();
-                	
-                }if (GeneradorDeWombats.tipoWombatGlobal == 5) {
-                	
-                	//Cod wombat nuke
                 	
                 	Limpiador.limpiarCode();
                 	
-                }if (GeneradorDeWombats.tipoWombatGlobal == 6) {
+                }if (GeneradorDeWombats.tipoWombatGlobal == 5) { //Cod wombat nuke
                 	
                 	
-                }if (GeneradorDeWombats.tipoWombatGlobal == 0) {
+                	
+                	Limpiador.limpiarCode();
+                	
+                }if (GeneradorDeWombats.tipoWombatGlobal == 6) { //Cod wombat gordo
+                	
+                	Nivel1.puntuacion+=30;
+                	GeneracionLogger.log.info("INFO: Puntuacion aumentada.");
                 	
                 	Limpiador.limpiarCode();
                 	
@@ -74,7 +89,7 @@ public class Puntuacion {
                 
             }else if (valor==0){  //cambio pal logger
                 valor=0;
-                Nivel1.puntuacion--;
+                Nivel1.puntuacion = 0;
                 GeneracionLogger.log.info("INFO: Puntuacion reducida."); 
             }
             Nivel1.lblPuntuacion.setText("Score:"+ Nivel1.puntuacion);

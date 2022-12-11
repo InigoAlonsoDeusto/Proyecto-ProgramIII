@@ -32,7 +32,8 @@ public class Nivel1 extends JFrame {
      public static int puntuacionMaxima = 0;
 
      public static int[] agujeroConWombat = new int[9]; //Array que va a representar el estado del agujero
-                                                  //Si int=1 el wombat se verá, si int=0 no.
+                                                  		//Si int=1 el wombat se verá, si int=0 no.
+     
      public static int puntuacion = 0; //empezamos con una puntuacion de 0 en un inicio
 
 
