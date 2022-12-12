@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -24,9 +25,16 @@ public class Menu extends JFrame{
 
 
         JPanel PanelMenu =  new JPanel(); //Estas 3 lineas son para poder meter cosas a nuestra ventana, y de paso ponerla verde
-        PanelMenu.setBackground(new Color (0, 100, 0)); //Esto hay que cambiarlo por texturas mas adelante que queda biendefeo
+        //PanelMenu.setBackground(new Color (0, 100, 0)); //Esto hay que cambiarlo por texturas mas adelante que queda biendefeo
+        PanelMenu.setOpaque(true);
+        PanelMenu.setBackground(new Color(0,0,0,0));
         PanelMenu.setLayout(null);
         setContentPane(PanelMenu);
+        
+
+		
+		
+        
 
         JLabel lblTitulo = new JLabel ("WOMBAT WARS"); //Implementamos JLabel para mostrar la puntuacion del jugador a lo largo de la partida
         //lblTitulo.setForeground(new Color(135, 206, 250));
@@ -124,6 +132,12 @@ public class Menu extends JFrame{
             }
         });
 
+        
+        JLabel granja = new JLabel("");
+		ImageIcon granja1 = new ImageIcon("WombatWarsProyecto/res/Gran.jpg");
+		granja.setIcon(granja1);
+		granja.setBounds(0, 0,1200,650);
+		PanelMenu.add(granja);
     }
     
 }

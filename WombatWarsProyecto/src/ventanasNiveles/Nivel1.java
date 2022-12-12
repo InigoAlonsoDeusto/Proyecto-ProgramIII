@@ -1,6 +1,7 @@
 package ventanasNiveles;
 
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.BorderFactory;
 
@@ -28,12 +29,12 @@ public class Nivel1 extends JFrame {
      public static JLabel lblPuntuacion;
      public static JLabel lblTiempoRestante;
      public static JLabel lblPuntuacionMaxima;
+     public static JLabel fondo;
 
      public static int puntuacionMaxima = 0;
 
      public static int[] agujeroConWombat = new int[9]; //Array que va a representar el estado del agujero
-                                                  		//Si int=1 el wombat se verá, si int=0 no.
-     
+                                                  //Si int=1 el wombat se verá, si int=0 no.
      public static int puntuacion = 0; //empezamos con una puntuacion de 0 en un inicio
 
 
@@ -57,24 +58,31 @@ public class Nivel1 extends JFrame {
         PanelWW.setBackground(new Color (0, 100, 0)); //Esto hay que cambiarlo por texturas mas adelante que queda biendefeo
         PanelWW.setLayout(null);
         setContentPane(PanelWW);
+        
+     
+        
 
         panel = new JPanel(); //JPanel dentro de JPanel especifico para las cajas de las que podran salir los wombats
-        panel.setBackground(new Color(0, 50, 0));
+        panel.setOpaque(true);
+        panel.setBackground(new Color(0,0,0,0));
+        //panel.setBackground(new Color(0, 50, 0));
         panel.setBounds(0, 200, 1200, 450);
         panel.setLayout(null);
         PanelWW.add(panel);
 
         lblPuntuacion = new JLabel ("Puntuacion: 0"); //Implementamos JLabel para mostrar la puntuacion del jugador a lo largo de la partida
         lblPuntuacion.setHorizontalAlignment(SwingConstants.TRAILING); //TRAILING para que se ajuste al texto
-        lblPuntuacion.setForeground(new Color(135, 206, 250));
-        lblPuntuacion.setBounds(423, 54, 144, 33);
+        lblPuntuacion.setForeground(new Color(0, 0, 0));
+        lblPuntuacion.setBounds(410, 54, 144, 33);
         PanelWW.add(lblPuntuacion);
 
         lblTiempoRestante = new JLabel("20"); //Implementamos JLabel para indicar el tiempo restante
         lblTiempoRestante.setHorizontalAlignment(SwingConstants.CENTER);
         lblTiempoRestante.setForeground(new Color(240, 128, 128));
-        lblTiempoRestante.setBounds(232, 54, 144, 33);
+        lblTiempoRestante.setBounds(800, 54, 144, 33);
         PanelWW.add(lblTiempoRestante);
+        
+       
 
         agujeros[0] = new JLabel(); //A continuacion los Jlabels de las cajas de las que podran salir los wombats, falta poner imagenes como en el fondo
         agujeros[0].setBorder(borde);
@@ -84,7 +92,7 @@ public class Nivel1 extends JFrame {
         
         JLabel agujero0 = new JLabel("");
 		agujero0.setHorizontalAlignment(SwingConstants.CENTER);
-		ImageIcon iconoAgujero0 = new ImageIcon("WombatWarsProyecto/res/agujeroVacioPNG.png");
+		ImageIcon iconoAgujero0 = new ImageIcon("WombatWarsProyecto/res/hoyo.png");
 		agujero0.setIcon(iconoAgujero0);
 		agujero0.setBounds(300, 43, 100, 100);
 		panel.add(agujero0);
@@ -212,6 +220,26 @@ public class Nivel1 extends JFrame {
             agujeros[i].setBorder(borde);
             agujeroConWombat[i] = 0; //Inicializamos todos los agujeros a 0 para que no haya ningun wombat visible.
         }
+        
+        JLabel coras = new JLabel("");
+		ImageIcon coras1 = new ImageIcon("WombatWarsProyecto/res/CORASLLENOS.png");
+		coras.setIcon(coras1);
+		coras.setBounds(420, -70, 200, 400);
+		PanelWW.add(coras);
+
+		JLabel cartel = new JLabel("");
+		ImageIcon cartel1 = new ImageIcon("WombatWarsProyecto/res/cartel.png");
+		cartel.setIcon(cartel1);
+		cartel.setBounds(410, -195,1200,600);
+		PanelWW.add(cartel);
+        
+        
+        JLabel fondo = new JLabel("");
+		ImageIcon fondo1 = new ImageIcon("WombatWarsProyecto/res/verde.png");
+		fondo.setIcon(fondo1);
+		fondo.setBounds(0, 0,1200,650);
+		PanelWW.add(fondo);
+		
         
     }
 }

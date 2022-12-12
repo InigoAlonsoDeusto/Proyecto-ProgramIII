@@ -1,6 +1,7 @@
 package ventanas;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -37,21 +38,21 @@ public class VentanaWombats extends JFrame {
 	setContentPane(contentPane);
 	
     JPanel panel =  new JPanel(); //Estas 3 lineas son para poder meter cosas a nuestra ventana, y de paso ponerla verde
-    //panel.setBackground(new Color (0, 0, 0)); //Esto hay que cambiarlo por texturas mas adelante que queda biendefeo
+    panel.setBackground(new Color (0, 0, 0)); //Esto hay que cambiarlo por texturas mas adelante que queda biendefeo
 	panel.setLayout(null);
     setContentPane(panel);
 		
 		JLabel imagen = new JLabel("");
 		imagen.setHorizontalAlignment(SwingConstants.CENTER);
-		ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/fondoNivelesWombat.jpeg");
+		ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wonbatIncognita.png");
 		imagen.setIcon(icono);
 		imagen.setBounds(10, 35, 370, 450);
 		panel.add(imagen);
-		
+		//efewf
 		JButton wombatNormal = new JButton("Wombat Normal");
 		wombatNormal.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wombatNormal.jpeg");
+				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wonbat.png");
 				imagen.setIcon(icono);
 			}
 		});
@@ -61,7 +62,7 @@ public class VentanaWombats extends JFrame {
 		JButton wombatBomba = new JButton("Wombat Bomba");
 		wombatBomba.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wombatBomba.jpeg");
+				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wonbatBomba.png");
 				imagen.setIcon(icono);
 			}
 		});
@@ -71,7 +72,7 @@ public class VentanaWombats extends JFrame {
 		JButton reyWombat = new JButton("Rey Wombat");
 		reyWombat.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/reyWombat.jpeg");
+				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/REY.png");
 				imagen.setIcon(icono);
 			}
 		});
@@ -81,7 +82,7 @@ public class VentanaWombats extends JFrame {
 		JButton wombatDiamante = new JButton("Wombat Diamante");
 		wombatDiamante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wombatDiamante.jpeg");
+				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wonbatpngdiamantessssss.png");
 				imagen.setIcon(icono);
 			}
 		});
@@ -91,7 +92,7 @@ public class VentanaWombats extends JFrame {
 		JButton wombatGordo = new JButton("Wombat Gordo");
 		wombatGordo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wombatGordo.jpeg");
+				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wonbatardo.png");
 				imagen.setIcon(icono);
 			}
 		});
@@ -101,7 +102,7 @@ public class VentanaWombats extends JFrame {
 		JButton wombatOro = new JButton("Wombat Oro");
 		wombatOro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wombatOro.jpeg");
+				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/ELOROS.png");
 				imagen.setIcon(icono);
 			}
 		});
@@ -111,7 +112,7 @@ public class VentanaWombats extends JFrame {
 		JButton wombatTiempo = new JButton("Wombat Tiempo");
 		wombatTiempo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wombatTiempo.jpeg");
+				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/tiempo.png");
 				imagen.setIcon(icono);
 			}
 		});
@@ -121,7 +122,7 @@ public class VentanaWombats extends JFrame {
 		JButton wombatNuke = new JButton("Wombat Nuke");
 		wombatNuke.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/wombatNuke.jpeg");
+				ImageIcon icono = new ImageIcon("WombatWarsProyecto/res/nukeswonbat.png");
 				imagen.setIcon(icono);
 			}
 		});
@@ -136,7 +137,7 @@ public class VentanaWombats extends JFrame {
                 GeneracionLogger.log.info("INFO: Se ha abierto la ventana del libro correctamente.");               
                 ventana.ventanaBD();
 
-
+//holaaaaaaaaa
                 //nombre de clase           
                 dispose();   
 
@@ -145,5 +146,12 @@ public class VentanaWombats extends JFrame {
 		Volver.setBounds(542, 365, 113, 23);
 		panel.add(Volver);
 
+		
+		
+		    JLabel biblio = new JLabel("");
+			ImageIcon biblio1 = new ImageIcon("WombatWarsProyecto/res/madera.jpg");
+			biblio.setIcon(biblio1);
+			biblio.setBounds(0, 0,817,569);
+			panel.add(biblio);
 	}
 }

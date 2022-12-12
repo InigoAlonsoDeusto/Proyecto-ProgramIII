@@ -13,6 +13,7 @@ import codigoLogger.GeneracionLogger;
 import utilidadesUsuario.Usuario;
 
 import javax.swing.JScrollPane;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -47,6 +48,34 @@ public class VentanaTienda extends JFrame {
 		btnComprar.setBounds(168, 219, 99, 23);
 		panel.add(btnComprar);
 		
+		JButton hero1 = new JButton("");
+		hero1.setBounds(0, 0, 112, 112);
+		scrollPaneAccesorios.add(hero1);
+		
+		JButton hero2 = new JButton("Heroe 2");
+		hero2.setBounds(147, 0, 112, 112);
+		scrollPaneAccesorios.add(hero2);
+		
+		JButton hero3 = new JButton("Heroe 3");
+		hero3.setBounds(294, 0, 112, 112);
+		scrollPaneAccesorios.add(hero3);
+		
+	
+		JLabel r = new JLabel("");
+	 	ImageIcon re = new ImageIcon("WombatWarsProyecto/res/unai.png");
+	 	r.setIcon(re);
+	 	r.setBounds(0, 0,100,100);
+	 	hero1.add(r);
+	 	
+	 	JLabel smile = new JLabel("");
+	 	ImageIcon smile1 = new ImageIcon("WombatWarsProyecto/res/smile.png");
+	 	smile.setIcon(smile1);
+	 	smile.setBounds(0, -10,90,90);
+	 	hero2.add(smile);
+
+		
+	
+		
 		JButton btnVerMas = new JButton("VER M\u00C1S");
 		btnVerMas.setBounds(45, 219, 89, 23);
 		panel.add(btnVerMas);
@@ -77,6 +106,15 @@ public class VentanaTienda extends JFrame {
 		lblBienvenida2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblBienvenida2.setBounds(10, 11, 406, 25);
 		panel.add(lblBienvenida2);
-
+		
+		
+		
+		JLabel wood = new JLabel("");
+	 	ImageIcon wood1 = new ImageIcon("WombatWarsProyecto/res/wood.jpg");
+	 	wood.setIcon(wood1);
+	 	wood.setBounds(0, 0,1200,650);
+	 	panel.add(wood);
+	 	
+	 
 	}
 }

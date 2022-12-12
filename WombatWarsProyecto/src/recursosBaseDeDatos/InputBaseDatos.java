@@ -147,7 +147,7 @@ public class InputBaseDatos {
 		java.util.Date fecha = Calendar.getInstance().getTime();  
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");  
 		String fechaString = dateFormat.format(fecha);   
-		System.out.println(fechaString);
+System.out.println(fechaString);
         try (Connection conn = InputBaseDatos.conectar(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
 			
 			//LocalDateTime hora = LocalDateTime.now();

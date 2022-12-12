@@ -1,7 +1,9 @@
 package ventanas;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
@@ -46,6 +48,8 @@ public class VentanaBD extends JFrame {
     //panel.setBackground(new Color (0, 0, 0)); //Esto hay que cambiarlo por texturas mas adelante que queda biendefeo
     panel.setLayout(null);
     setContentPane(panel);
+    
+   
 	
     JTable table = new JTable();
     table.setBounds(100, 100, 1000, 142);
@@ -178,7 +182,12 @@ public class VentanaBD extends JFrame {
         e.printStackTrace();
         GeneracionLogger.log.error("ERROR: Ha habido un error al cargar las tablas de la BD");
     } 
-
+     
+    JLabel biblio = new JLabel("");
+ 	ImageIcon biblio1 = new ImageIcon("WombatWarsProyecto/res/libros.png");
+ 	biblio.setIcon(biblio1);
+ 	biblio.setBounds(0, 0,1200,650);
+ 	panel.add(biblio);
     }
 
 

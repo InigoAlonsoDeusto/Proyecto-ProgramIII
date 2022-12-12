@@ -14,7 +14,7 @@ import ventanasNiveles.Nivel1;
 import java.awt.Color;
 import java.awt.Image;
 
-public class GeneradorDeWombats {
+public class GeneradorDeWombats extends Nivel1{
 
 	private Random numeroRandom;
 	private int wombat;
@@ -78,8 +78,14 @@ public class GeneradorDeWombats {
              */
             if(tipoWombat == 0) {
             
-            Nivel1.agujeroConWombat[wombat] = 1; //Ponemos el agujero a 1 para que el wombat estÃ© visible (salga del agujero).
-            Nivel1.agujeros[wombat].setBorder(borde2); //Lo pintamos por ahora para comprobar que sale, aquÃ­ le meteremos la imagen del wombat con .setIcon().
+            Nivel1.agujeroConWombat[wombat] = 1;//Ponemos el agujero a 1 para que el wombat esta visible (salga del agujero).
+            //ImageIcon wonbatSali = new ImageIcon("WombatWarsProyecto/res/agujeroConWonbat.png");
+            //Nivel1.agujeros[wombat].setIcon(wonbatSali);
+            Nivel1.agujeros[wombat].setBorder(borde);
+            
+            
+            //Nivel1.agujeros[i].setIcon("/moleIn.png"); //Lo pintamos por ahora para comprobar que sale, aquÃ­ le meteremos la imagen del wombat con .setIcon().
+            
             }
             
             if(tipoWombat == 1) {
@@ -115,7 +121,11 @@ public class GeneradorDeWombats {
             if(tipoWombat == 6) {
                 
                 Nivel1.agujeroConWombat[wombat] = 1; //Ponemos el agujero a 1 para que el wombat estÃ© visible (salga del agujero).
+                ImageIcon wombatGordo = new ImageIcon("WombatWarsProyecto/res/gordo.png");
+                Nivel1.agujeros[wombat].setIcon(wombatGordo);
                 Nivel1.agujeros[wombat].setBorder(borde4); //Lo pintamos por ahora para comprobar que sale, aquÃ­ le meteremos la imagen del wombat con .setIcon().
+
+
                 }
             
             
