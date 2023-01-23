@@ -74,8 +74,6 @@ public class VentanaTienda extends JFrame {
 	 	hero2.add(smile);
 
 		
-	
-		
 		JButton btnVerMas = new JButton("VER M\u00C1S");
 		btnVerMas.setBounds(45, 219, 89, 23);
 		panel.add(btnVerMas);
@@ -84,8 +82,8 @@ public class VentanaTienda extends JFrame {
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				Menu men = new Menu();
-				men.X();
+				Menu menu = new Menu();
+				menu.MenuCode();
 
 			    VentanaTienda.this.setVisible(false);
 			    VentanaTienda.this.dispose();

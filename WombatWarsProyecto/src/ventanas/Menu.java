@@ -17,7 +17,7 @@ import ventanasNiveles.Nivel1;
 
 public class Menu extends JFrame{
 
-    public void X() {
+    public void MenuCode() {
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1200,650);
@@ -30,9 +30,6 @@ public class Menu extends JFrame{
         PanelMenu.setBackground(new Color(0,0,0,0));
         PanelMenu.setLayout(null);
         setContentPane(PanelMenu);
-        
-
-		
 		
         
 
@@ -45,7 +42,7 @@ public class Menu extends JFrame{
 
         
 
-        JButton b = new JButton("Comenzar el juego");
+        JButton b = new JButton("Seleccionar nivel");
         b.setBounds(100,250,300,100); 
         add(b);
 
@@ -56,10 +53,10 @@ public class Menu extends JFrame{
             public void actionPerformed(ActionEvent e) {
 
 
-                Nivel1 partida = new Nivel1(); 
-                partida.WombatWarsMainCode(); 
-                GeneracionLogger.log.info("INFO: Se ha abierto la ventana del juego correctamente.");               
-                dispose();     
+            	VentanaNiveles nvl = new VentanaNiveles();
+                GeneracionLogger.log.info("INFO: Se ha abierto la ventana del selector de nivel correctamente.");    
+                nvl.VentanaNivelesCode();
+                dispose();
             }
         });
 

@@ -71,8 +71,8 @@ public class VentanaBD extends JFrame {
     btnVolver.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
 
-            Menu men = new Menu();
-            men.X();
+            Menu menu = new Menu();
+            menu.MenuCode();
 
             VentanaBD.this.setVisible(false);
             VentanaBD.this.dispose();

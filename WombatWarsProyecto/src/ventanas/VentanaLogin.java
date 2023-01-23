@@ -82,8 +82,8 @@ public class VentanaLogin extends JFrame {
 					JOptionPane.showMessageDialog(contentPane, "Login correcto");
 					GeneracionLogger.log.info("INFO: Se ha realizado el LogIn correctamente.");
 					
-					Menu men = new Menu();
-					men.X();
+					Menu menu = new Menu();
+					menu.MenuCode();
 					
 					VentanaLogin.this.setVisible(false);
 					VentanaLogin.this.dispose();
@@ -154,8 +154,8 @@ public class VentanaLogin extends JFrame {
 					JOptionPane.showMessageDialog(contentPane, "Login correcto");
 					GeneracionLogger.log.info("INFO: Se ha realizado el LogIn correctamente.");
 					
-					Menu men = new Menu();
-					men.X();
+					Menu menu = new Menu();
+					menu.MenuCode();
 					
 					VentanaLogin.this.setVisible(false);
 					VentanaLogin.this.dispose();
