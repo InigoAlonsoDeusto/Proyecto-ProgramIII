@@ -33,7 +33,7 @@ public class Launcher extends Thread{
 
         h1.start();
 
-        //baseDeDatos.MeterDatos(); <- Este método ya se ha usado, no lo necesitamos otra vez.
+       
    
     }
     

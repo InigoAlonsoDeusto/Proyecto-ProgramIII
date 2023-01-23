@@ -10,12 +10,21 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
+
+import codigoLogger.GeneracionLogger;
+
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import fasesDeJuego.Inicio;
 import utilidadesJuego.Limpiador;
+import ventanas.Menu;
+import ventanas.VentanaTienda;
 
 import java.awt.FlowLayout;
 
@@ -37,6 +46,7 @@ public class Nivel1 extends JFrame {
                                                   //Si int=1 el wombat se verá, si int=0 no.
      public static int puntuacion = 0; //empezamos con una puntuacion de 0 en un inicio
 
+     public static int acomulado = puntuacion; //empezamos con un acomulado de 0
 
     public void WombatWarsMainCode(){ //aqui juntamos estos tres metodos que serian la base del juego
 
@@ -54,6 +64,10 @@ public class Nivel1 extends JFrame {
 
     public void juego() {
 
+    	
+    	
+    	
+
         JPanel PanelWW =  new JPanel(); //Estas 3 lineas son para poder meter cosas a nuestra ventana, y de paso ponerla verde
         PanelWW.setBackground(new Color (0, 100, 0)); //Esto hay que cambiarlo por texturas mas adelante que queda biendefeo
         PanelWW.setLayout(null);
@@ -70,20 +84,35 @@ public class Nivel1 extends JFrame {
         panel.setLayout(null);
         PanelWW.add(panel);
 
+        
+        JButton btnVolver = new JButton("VOLVER");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				Menu menu = new Menu();
+				menu.MenuCode();
+
+			    Nivel1.this.setVisible(false);
+			    Nivel1.this.dispose();
+				GeneracionLogger.log.info("INFO: Se ha abierto el menu correctamente."); 
+			}
+		});
+		
+		btnVolver.setBounds(150, 375, 89, 23);
+		panel.add(btnVolver);
         lblPuntuacion = new JLabel ("Puntuacion: 0"); //Implementamos JLabel para mostrar la puntuacion del jugador a lo largo de la partida
         lblPuntuacion.setHorizontalAlignment(SwingConstants.TRAILING); //TRAILING para que se ajuste al texto
         lblPuntuacion.setForeground(new Color(0, 0, 0));
         lblPuntuacion.setBounds(410, 54, 144, 33);
         PanelWW.add(lblPuntuacion);
 
-        lblTiempoRestante = new JLabel("20"); //Implementamos JLabel para indicar el tiempo restante
+        lblTiempoRestante = new JLabel("10"); //Implementamos JLabel para indicar el tiempo restante
         lblTiempoRestante.setHorizontalAlignment(SwingConstants.CENTER);
         lblTiempoRestante.setForeground(new Color(240, 128, 128));
         lblTiempoRestante.setBounds(800, 54, 144, 33);
         PanelWW.add(lblTiempoRestante);
         
-       
-
+        
         agujeros[0] = new JLabel(); //A continuacion los Jlabels de las cajas de las que podran salir los wombats, falta poner imagenes como en el fondo
         agujeros[0].setBorder(borde);
         agujeros[0].setName("0");
