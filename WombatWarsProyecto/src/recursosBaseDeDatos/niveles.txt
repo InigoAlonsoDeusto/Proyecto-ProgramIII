@@ -1,0 +1,3 @@
+Granja;El nivel mas sencillo con animales al rededor que te brindaran amor y tranquilidad;9;10;0
+Bosque;Tenebroso cuanto menos pues no sabes que criaturas alberga la oscuridad;20;20;100
+Nether;Referenciando a los ghasts del minecraft y los cerdos a los que robas el oro... MUY PELIGROSO!, NO ENTRAR!;36;55;1000
