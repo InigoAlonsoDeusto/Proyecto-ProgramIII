@@ -1,10 +1,16 @@
 package fasesDeJuego;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
 
 import codigoLogger.GeneracionLogger;
 //import recursosBaseDeDatos.InputBaseDatos;
 import utilidadesJuego.Limpiador;
+import utilidadesUsuario.Usuario;
 import ventanas.VentanaLogin;
 import ventanasNiveles.Nivel1;
 import ventanas.Menu;
@@ -16,6 +22,8 @@ public class GameOver {
     public static int acomuladofinal = Nivel1.puntuacion + Nivel1.acomulado;
 
     public static String nombre = VentanaLogin.textField.getText();
+    
+	
 
     public static void gameOver() { //generamos el gameover para cuando finalice la partida y para que nos muestre la WombatWarsMain.puntuacion obtenida
         try {
